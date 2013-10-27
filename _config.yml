@@ -23,16 +23,16 @@ owner:
 google_analytics:   UA-37934153-1
 google_verify:      tEdoh0-lJNm_oPHttYuGKL2QoKzQlXbcsIcEZejXOjs
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:
 
 # Links to include in top navigation
 # For external links add external: true
-links:
-  - title: Theme Setup
-    url: /theme-setup
-  - title: External Link
-    url: http://mademistakes.com
-    external: true
+# links:
+#   - title: Theme Setup
+#     url: /theme-setup
+#   - title: External Link
+#     url: http://mademistakes.com
+#     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles

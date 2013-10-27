@@ -3,7 +3,7 @@ layout: post
 title: Introductory Markdown Tutorial
 description: "What the heck is Markdown? How the frick can I just write stuff in it? Find some answers here!"
 modified: 2013-10-09
-tags: [markdown content blog-writing]
+tags: [markdown,content,blog-writing]
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
@@ -11,8 +11,6 @@ image:
 comments: true
 share: true
 ---
-
-# Markdown Tutorial
 
 Markdown is a way of writing text that gets automatically transformed into
 websites. Simply put, Markdown is the best way to write content for the
@@ -37,9 +35,13 @@ You write:
 And this comes out:
 
 # Header 1
+
 ## Header 2
+
 ### Header 3
+
 #### Header 4
+
 ##### Header 5
 
 ## Paragraphs
@@ -96,12 +98,10 @@ start with the `>` character.
 You write:
 
     > Blockquotes are like quoted text in email replies
-    >> And, they can be nested
 
 And this comes out:
 
 > Blockquotes are like quoted text in email replies
->> And, they can be nested
 
 ## Lists
 
@@ -162,11 +162,11 @@ You write:
 
 And this comes out:
 
-```
+{% highlight javascript %}
 function sqrt(number) {
   return Math.pow(number, 0.5);
 }
-```
+{% endhighlight %}
 
 ## Horizontal rules
 
@@ -199,3 +199,4 @@ And this comes out:
 
 - Outer pipes `|` on tables are optional
 - Colons used for alignment (right versus left)
+

@@ -3,7 +3,7 @@ layout: post
 title: Modern Web Development Journey
 description: "A introductory post about the basics of HTML, CSS, and JavaScript. And a little about how I got into it."
 modified: 2013-06-20
-tags: [html css javascript]
+tags: [html,css,javascript]
 image:
   feature: abstract-6.jpg
   credit: dargadgetz
@@ -11,8 +11,6 @@ image:
 comments: true
 share: true
 ---
-
-# Modern Web Development Journey
 
 About 6 months ago I began a new endeavor. I decided that HTML5 was cool, and I was determined to learn it. At that time, I didn't realize what HTML5 even meant. Since then, I've learned a lot; I'd like to share some of that with you.
 
@@ -26,13 +24,13 @@ After much frustration, I became determined to learn to use the "modern web" as 
 
 HTML defines the **content** of a web page. In a perfect world, the HTML simply tells the web page what elements should be found on the page, how they are arranged hierarchically, and what the contents of those elements are. Stylistic things, like color and font size, shouldn't (notice I didn't say *can't*) be found in your HTML. It's also important to note that written within your HTML documents are the links to CSS and JavaScript files.
 
-```html
+{% highlight html %}
 <!-- I'm a comment -->
 
 <div class="poobar">
   Ahoy there! I'm HTML. Nice to meet you.
 </div>
-```
+{% endhighlight %}
 
 ### CSS
 
@@ -40,14 +38,14 @@ CSS files are a way of defining the **style** of your pages in a re-usable manne
 
 CSS makes life easier by allowing you to rip out all that styling information and put it in a separate file that you simply "hook up" to your HTML pages. Once the link is established, your HTML page automatically uses the CSS to make things pretty and consistent. Don't be fooled, CSS may be a relatively small language, but it gets complicated really quickly.
 
-```css
+{% highlight css %}
 /* I'm a comment */
 
 .poobar {
   font-size: 20px;
   color: blue;
 }
-```
+{% endhighlight %}
 
 
 ### JavaScript
@@ -60,13 +58,14 @@ JavaScript pretty much does all the **doing** for web pages. Need to talk to a s
 
 Old browsers do some pretty funky things with JavaScript. Libraries like `jQuery` mitigate these issues by providing you a consistent way of writing your JavaScript. Personally I've chosen to mostly ignore older browsers in the hopes that they will disappear shortly. That's how it works, right?!
 
-```javascript
+{% highlight javascript %}
 // I'm a comment
 
 var thingy = document.querySelector('.poobar');
 thingy.innerText = 'Changing the content of the HTML with JavaScript.';
-```
+{% endhighlight %}
 
 ### Boom
 
 My future posts will be less milk and more meat on these subjects. I suggest [Code Academy](http://www.codecademy.com/) as a good place to start learning this stuff.
+
