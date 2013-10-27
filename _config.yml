@@ -1,30 +1,27 @@
-title:            Site Title
-description:      Describe your website here.
-disqus_shortname: 
+title:            jon de la motte
+description:      The personal site and blog of Jon de la Motte
+disqus_shortname: jondelamotte
 #Comment out url when working locally to resolve base urls correctly
-url:              http://your-website.com
+url:              http://192.241.229.14:8080
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  name:           Jon de la Motte
+  avatar:         jond.png
+  bio:            "I'm a full-stack web developer and consultant working in Portland, Oregon. I'm all about high tech and the open web."
+  email:          jondlm@gmail.com
+
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
+  twitter:        http://twitter.com/jondelamotte
+  github:         http://github.com/jondlm
+  stackexchange:  http://stackoverflow.com/users/895558/jondlm
+  linkedin:       http://www.linkedin.com/pub/jonathan-de-la-motte/12/921/886
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:   
+  #google_plus:
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
+google_analytics:   UA-37934153-1
+google_verify:      tEdoh0-lJNm_oPHttYuGKL2QoKzQlXbcsIcEZejXOjs
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
 
@@ -38,7 +35,7 @@ links:
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    America/Los_Angeles
 future:      true
 pygments:    true
 markdown:    kramdown
@@ -65,3 +62,4 @@ kramdown:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+
