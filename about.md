@@ -2,7 +2,7 @@
 layout: page
 permalink: /about/
 title: About Jon
-tags: [Jekyll, theme, modern, minimal, responsive]
+tags: []
 image:
   feature: abstract-5.jpg
   credit: dargadgetz

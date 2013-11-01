@@ -1,7 +1,7 @@
 title:            jon de la motte
 description:      The personal site and blog of Jon de la Motte
 disqus_shortname: jondelamotte
-#Comment out url when working locally to resolve base urls correctly
+# Comment out url when working locally to resolve base urls correctly
 url:              http://jondelamotte.com
 
 # Owner/author information
@@ -28,8 +28,8 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 # links:
-#   - title: Theme Setup
-#     url: /theme-setup
+#   - title: Portfolio
+#     url: /portfolio
 #   - title: External Link
 #     url: http://mademistakes.com
 #     external: true
