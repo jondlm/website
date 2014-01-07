@@ -3,7 +3,7 @@ description:      The personal site and blog of Jon de la Motte
 disqus_shortname: jondelamotte
 # Comment out url when working locally to resolve base urls correctly
 url:              http://jondelamotte.com
-# url:              http://192.241.229.14:8080
+#url:              http://192.241.229.14:8080
 
 # Owner/author information
 owner:
