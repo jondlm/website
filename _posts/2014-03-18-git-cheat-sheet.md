@@ -30,6 +30,7 @@ with Git; the best source control on the planet.
 - `git add --all` stage all changes
 - `git commit -m "the first commit"` commit the changes
 - `git checkout master -- file.html` checkout a file from another branch
+- `git checkout HEAD -- file.html` checkout a file from HEAD
 
 ## Merge conflicts
 
