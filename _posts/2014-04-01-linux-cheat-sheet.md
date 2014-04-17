@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2014-04-03
+modified: 2014-04-17
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
@@ -67,6 +67,9 @@ Search the root directory for anything with 'something' in it and pipe that to l
 - `/etc/hosts` is a file that is like a personal DNS. You can map custom IPs to hostnames in it.
 - `sudo netstat -tulpn` display all the open ports on your machine
 
+- `ssh -i ~/.ssh/id_rsa jon@10.10.10.10` log into the `10.10.10.10` machine with
+  the user `jon` using the private key file `~/.ssh/id_rsa`
+
 ## User management
 
 - `usermod -a -G youre_mobile jon` add existing user to existing group
@@ -105,13 +108,17 @@ Search the root directory for anything with 'something' in it and pipe that to l
 
 ### Generating a new ssh key
 
-You shouldn't generally need more than one SSH key, I should be reusing the same one.
+For the best security, you should be using one SSH key per device you use. An
+SSH key can optionally be password protected for extra security. When you
+generate a key, two files are created. One of the private key (don't give it to
+anyone), the other is the public key, which is meant to be public.
 
 1. Make sure you don't already have an ssh key you can use, check `~/.ssh`
-2. ssh-keygen -t rsa -C "your_email@example.com"
+2. `ssh-keygen -t rsa -C "your_email@example.com"`
 3. `ssh-add ~/.ssh/id_rsa`
 
-Using `ssh-add` puts your private key into `ssh-agent` that stores your password and private key while your machine is running
+Using `ssh-add` puts your private key into `ssh-agent` that stores your password
+and private key while your machine is running
 
 Make sure your `ssh-agent` is running with `ssh-agent bash`
 
