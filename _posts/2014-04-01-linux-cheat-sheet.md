@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2014-04-17
+modified: 2014-05-06
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
@@ -35,7 +35,8 @@ writing **everything** I learned down. Maybe this stuff will help someone else.
 
 ## File system
 
-- `du -sh *` This command shows the file sizes for all files and folders in the current folder. Very useful.
+- `df -ah` shows all your mounted disks and their free space
+- `du -sh *` shows the file sizes for all files and folders in the current folder
 - `mv ~/Linux/Old/!(Tux.png|Tux2.png) ~/Linux/New/` move all files except one
 - `tree` shows current directory as tree (usually doesn't come with stock OS)
 - `tree -H http://jondelamotte.com` outputs an HTML tree of a site with a base href
@@ -124,7 +125,7 @@ Make sure your `ssh-agent` is running with `ssh-agent bash`
 
 ## Ubuntu unity
 
-- `alt + num5` hit any of the numpad numbers to align the windows
+- `ctrl + alt + num5` hit any of the numpad numbers to align the windows
 - `hold super key` for keyboard shortcuts
 
 ## Compilation
