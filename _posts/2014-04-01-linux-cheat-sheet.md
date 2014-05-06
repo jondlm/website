@@ -71,6 +71,10 @@ Search the root directory for anything with 'something' in it and pipe that to l
 - `ssh -i ~/.ssh/id_rsa jon@10.10.10.10` log into the `10.10.10.10` machine with
   the user `jon` using the private key file `~/.ssh/id_rsa`
 
+- `curl http://www.jondelamotte.com` perform a GET to www.jondelamotte.com
+- `curl -I http://jondelamotte.com` perform a HEAD against jondelamotte.com,
+  shows status and other useful info without requesting the body
+
 ## User management
 
 - `usermod -a -G youre_mobile jon` add existing user to existing group
