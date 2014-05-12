@@ -18,6 +18,7 @@ with it, you'll never want to use another text editor.
 General
 
 - `:edit` reloads the current file
+- `ctrl-e` open/close NERDTree sidebar
 
 Line breaking
 
