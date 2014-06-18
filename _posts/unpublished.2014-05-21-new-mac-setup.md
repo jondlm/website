@@ -34,8 +34,7 @@ Mavericks works.
   makes your command line pretty
 - [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) the best, and hardest,
   text editor and IDE that is worth learning if you are serious about computers
-- [Spf-13](http://vim.spf13.com/) a collection of add-ons to Vim that will rock
-  your world
+- [jVim](http://github.com/jondlm/jvim) my personal vim, and extras, setup
 - [Tmux](http://en.wikipedia.org/wiki/Tmux) manages windows within your
   terminal. It lets you open up and resize several terminal windows without
   leaving the keyboard and reaching for that dirty mouse.
@@ -60,9 +59,9 @@ modifying `~/.bashrc` and `~/.zshrc`
 
     echo “PATH=/usr/local/bin:/usr/local/sbin:$PATH" | tee ~/.bashrc ~/.zshrc
 
-Install zsh:
+Install zsh, vim, tmux, and something to connect your Mac's clipboard to Vim:
 
-    brew install zsh
+    brew install zsh tmux vim reattach-to-user-namespace
 
 Tell your mac to permit your custom shell:
 
@@ -80,35 +79,11 @@ Install oh-my-zsh:
 
     curl -L http://install.ohmyz.sh | sh
 
-Modify `~/.zshrc` change the `ZSH_THEME` line to:
+Install jVim to your home directory:
 
-    ZSH_THEME=”cloud”
-
-Create a file called `~/.tmux.conf` and put the following in it:
-
-    # copy and paster
-    set-option -g default-command "reattach-to-user-namespace -l zsh"
-
-    # look good
-    set -g default-terminal "screen-256color"
-
-    # act like vim
-    setw -g mode-keys vi
-    bind h select-pane -L
-    bind j select-pane -D
-    bind k select-pane -U
-    bind l select-pane -R
-    bind-key -r C-h select-window -t :-
-    bind-key -r C-l select-window -t :+
-    unbind [
-    bind ` copy-mode
-    unbind p
-    bind p paste-buffer
-    bind -t vi-copy v begin-selection
-    bind -t vi-copy y copy-selection
-
-    # after copying to a tmux buffer, hit y again to copy to clipboard
-    bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+    git clone https://github.com/jondlm/jvim.git ~/.jvim
+    cd ~/.jvim
+    ./install.sh
 
 Restart iTerm2.
 
@@ -119,10 +94,6 @@ Install some more stuff with `brew`:
 Fire up Tmux:
 
     tmux
-
-Install Spf-13:
-
-    curl http://j.mp/spf13-vim3 -L -o - | sh
 
 
 [solar-file]: https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors
