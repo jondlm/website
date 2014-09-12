@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2014-05-14
+modified: 2014-09-12
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
@@ -54,6 +54,9 @@ writing **everything** I learned down. Maybe this stuff will help someone else.
 - `chmod 666 file` grant read and write privileges to the owner, the group, and everyone
 - `chmod 777 some_dir` when chmodding a directory, make sure you use `7` instead of `6`, execute on
   a directory doesn't mean the same thing as a file
+- `for f in *.log; do echo -n "$f: "; cat $f | grep 'something' | wc -l; done;`
+  search through files in the current directory and count the number of lines
+  containing "something"
 
 ## Archiving and compression
 
