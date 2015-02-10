@@ -247,8 +247,8 @@ digraph my_graph {
 I may update this post in the future as I learn more about graphiz. Here are a
 couple links I've found useful:
 
-- http://www.graphviz.org/doc/info/attrs.html
-- http://www.graphviz.org/pdf/dotguide.pdf
+- [http://www.graphviz.org/doc/info/attrs.html](http://www.graphviz.org/doc/info/attrs.html)
+- [http://www.graphviz.org/pdf/dotguide.pdf](http://www.graphviz.org/pdf/dotguide.pdf)
 
 Feel free to reach out to me on twitter @jondelamotte
 
