@@ -6,4 +6,5 @@ codekit-config.json
 node_modules
 *.swp
 *.swo
+tmp
 
