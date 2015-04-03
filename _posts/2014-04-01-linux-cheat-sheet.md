@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2015-03-17
+modified: 2015-04-03
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
@@ -57,6 +57,9 @@ writing **everything** I learned down. Maybe this stuff will help someone else.
 - `for f in *.log; do echo -n "$f: "; cat $f | grep 'something' | wc -l; done;`
   search through files in the current directory and count the number of lines
   containing "something"
+- `find . -type f | sed -e 's%^\(\./[^/]*/\).*$%\1%' -e 's%^\.\/[^/]*$%./%' |
+  sort | uniq -c` recursively count files in sub directories of the current
+  directory
 
 ### [`fswatch`][fswatch]
 
