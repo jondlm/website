@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2015-04-03
+modified: 2015-06-01
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
@@ -26,6 +26,8 @@ writing **everything** I learned down. Maybe this stuff will help someone else.
 - `tput colors` display number of colors your terminal supports
 - `echo $TERM` shows what terminal you are using
 - `watch -n 2 "dmesg | tail -30"` continually watch the kernel messages for debugging
+- `history | sed 's/^\s\+//' | cut -f 1 -d ' ' --complement | sed 's/^\s\+//'|
+  sort | uniq -c | sort -r | head -n 20` top 20 commands you've run
 
 ### Recording sessions
 
@@ -133,6 +135,7 @@ Search the root directory for anything with 'something' in it and pipe that to l
 - `date —iso8601=seconds -u` displays iso 8601 date time for UTC. Some version of linux don't have this flag, see below
 - `date +%FT%T%z` displays iso 8601 local and works with all versions of `date`
 - `date -d '4 days ago'` relative dates
+- `date -d @1433177641` convert from epoch to human readable
 
 ## Security
 
