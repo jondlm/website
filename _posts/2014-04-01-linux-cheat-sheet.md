@@ -104,6 +104,9 @@ Search the root directory for anything with 'something' in it and pipe that to l
 - `curl -I http://jondelamotte.com` perform a HEAD against jondelamotte.com,
   shows status and other useful info without requesting the body
 
+- `tcpdump -s 0 -A 'tcp dst port 80 and (tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x504f5354)'`
+  see all HTTP POSTs coming into your box including their payloads
+
 ## User management
 
 - `usermod -a -G youre_mobile jon` add existing user to existing group
