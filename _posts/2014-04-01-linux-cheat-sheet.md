@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2015-12-23
+modified: 2016-04-13
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
@@ -106,6 +106,8 @@ Search the root directory for anything with 'something' in it and pipe that to l
 
 - `tcpdump -s 0 -A 'tcp dst port 80 and (tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x504f5354)'`
   see all HTTP POSTs coming into your box including their payloads
+- `sudo tcpdump -A -s 10240 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)' | egrep --line-buffered "^........(GET |HTTP\/|POST |HEAD )|^[A-Za-z0-9-]+: " | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g'`
+  see all HTTP headers on port 80. Credit to an [SO post](http://serverfault.com/a/633452).
 
 ## User management
 
