@@ -1,16 +1,10 @@
----
-layout: post
-title: File Watching for Much Win
-description: "How to use fswatch for much win"
-modified: 2015-10-09
-tags: [fswatch]
-image:
-  feature: abstract-5.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "File Watching for Much Win"
+description = "How to use fswatch for much win"
+date        = "2015-10-09"
+tags        = ["fswatch"] 
+comments    = true
++++
 
 ## File Watching for Much Win
 
@@ -28,9 +22,9 @@ them. Below are examples I've found to work flawlessly on my Mac.
 
 ## Examples
 
-{% highlight bash %}
+```bash
 fswatch *.go -l 0.2 | xargs -n1 go run
-{% endhighlight %}
+```
 
 Watch all `.go` files in the current directory and `go run` them. The `-n1`
 tells `xargs` to run for every new file name that gets piped to it. The `-l
@@ -39,18 +33,18 @@ right to be, but feel free to tweak it to your liking.
 
 <br> <br>
 
-{% highlight bash %}
+```bash
 fswatch . -l 0.1 | egrep --line-buffered '\.(js)$' | xargs -n1 node
-{% endhighlight %}
+```
 
 Recursively watch all `.js` files in the current directory and run them with
 `node`.
 
 <br> <br>
 
-{% highlight bash %}
+```bash
 fswatch . -l 0.1 | egrep --line-buffered '\.(js|jsx)$' | xargs -n1 -I{} echo "a javascript file was saved"
-{% endhighlight %}
+```
 
 Recursively watch all `.js` or `.jsx` files in the current directory and echo
 every time one is modified. The `-I{}` allows you to ignore the name of the

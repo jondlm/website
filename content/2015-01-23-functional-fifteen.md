@@ -1,19 +1,15 @@
----
-layout: post
-title: Functional Fifteen
-description: "My strategy for 2015"
-modified: 2015-01-23
-tags: [functional,inspirational,javascript,haskell]
-image:
-  feature: abstract-3.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Functional Fifteen"
+description = "My strategy for 2015"
+date        = "2015-01-23"
+tags        = ["functional", "inspirational", "javascript", "haskell"] 
+comments    = true
++++
 
 "Perfecting oneself is as much unlearning as it is learning."
 - Edsger Dijkstra
+
+{{ .Site.BaseURL }}
 
 Functional programming is all the rage these days. It's hard to go to a
 conference, the water cooler, or your grandmas house without hearing about it.

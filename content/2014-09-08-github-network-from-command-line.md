@@ -1,16 +1,10 @@
----
-layout: post
-title: Open the GitHub Network Graph from the Command Line
-description: "A script to open the github network graph from the command line"
-modified: 2014-09-08
-tags: [command-line,github,git]
-image:
-  feature: abstract-2.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Open the GitHub Network Graph from the Command Line"
+description = "A script to open the github network graph from the command line"
+date        = "2014-09-08"
+tags        = ["command-line", "github", "git"]
+comments    = true
++++
 
 One of the challenges of working with Git, or any source control for that
 matter, is managing branches. The GitHub network graph helps you visualize

@@ -1,16 +1,10 @@
----
-layout: post
-title: Favorite SublimeText Packages
-description: "SublimeText is a popular text and code editor. Come see what packages make it shine even brighter."
-modified: 2013-07-08
-tags: [tips,apps,sublimetext2]
-image:
-  feature: abstract-2.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Favorite SublimeText Packages"
+description = "SublimeText is a popular text and code editor. Come see what packages make it shine even brighter."
+date        = "2013-07-08"
+tags        = ["tips", "apps", "sublimetext2"]
+comments    = true
++++
 
 First off, if you don't use SublimeText, [get it](http://sublimetext.com). It's
 by far the best text editor I've encountered. I use it as a general purpose
@@ -31,33 +25,33 @@ Alignment helps me keep things tidy when I am writing code. I am especially
 fond of it when I need to write SQL queries, or other strangely aligned code.
 Here is an example of what it can do in few keystrokes:
 
-{% highlight sql %}
+```sql
 SELECT
   FirstColumn as alias1,
   SecondColumn as alias2,
   ThirdColumn as alias3
 FROM Table
-{% endhighlight %}
+```
 
 to
 
-{% highlight sql %}
+```sql
 SELECT
   FirstColumn   as alias1,
   SecondColumn  as alias2,
   ThirdColumn   as alias3
 FROM Table
-{% endhighlight %}
+```
 
 ## DocBlokr
 
 Makes formatting comments a breeze.
 
-{% highlight javascript %}
+```javascript
 ///////////////////////////
 // This is comment block //
 ///////////////////////////
-{% endhighlight %}
+```
 
 ## Emmet
 
@@ -67,7 +61,7 @@ Emmet is the newest iteration of a thing previously called Zen Coding. It makes 
 
 to
 
-{% highlight html %}
+```html
 <ul>
   <li></li>
   <li></li>
@@ -75,7 +69,7 @@ to
   <li></li>
   <li></li>
 </ul>
-{% endhighlight %}
+```
 
 ## EasyMotion
 
