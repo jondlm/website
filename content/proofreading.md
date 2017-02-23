@@ -25,7 +25,7 @@ repeatedly, it will highlight a single word at a time. Perhaps it's better to
 illustrate this with a GIF:
 
 <p class="text-center">
-  <img src="{{ site.url }}/images/posts/proofreading/proofreading-01.gif" alt="The HAYR method in action">
+  <img src="/images/posts/proofreading/proofreading-01.gif" alt="The HAYR method in action">
 </p>
 
 There's really not much more to say. I've found the HAYR method dramatically

@@ -55,7 +55,7 @@ below each diagram for their corresponding DOT code.
 
 ## Basics
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/1.svg)
+![something](/images/posts/elegant-diagrams/1.svg)
 ```
 graph my_graph {
   joe   [label = "Joe"];
@@ -65,7 +65,7 @@ graph my_graph {
 }
 ```
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/2.svg)
+![something](/images/posts/elegant-diagrams/2.svg)
 ```
 graph my_graph {
   node  [shape = box];
@@ -77,7 +77,7 @@ graph my_graph {
 }
 ```
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/3.svg)
+![something](/images/posts/elegant-diagrams/3.svg)
 ```
 graph my_graph {
   joe   [label = "Joe", shape = box];
@@ -87,7 +87,7 @@ graph my_graph {
 }
 ```
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/4.svg)
+![something](/images/posts/elegant-diagrams/4.svg)
 ```
 graph my_graph {
   joe   [label = "Joe"];
@@ -103,7 +103,7 @@ graph my_graph {
 }
 ```
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/4.1.svg)
+![something](/images/posts/elegant-diagrams/4.1.svg)
 ```
 graph my_graph {
   joe   [label = "Joe"];
@@ -119,7 +119,7 @@ graph my_graph {
 }
 ```
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/5.svg)
+![something](/images/posts/elegant-diagrams/5.svg)
 ```
 digraph my_graph {
   joe   [label = "Joe"];
@@ -135,7 +135,7 @@ digraph my_graph {
 }
 ```
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/6.svg)
+![something](/images/posts/elegant-diagrams/6.svg)
 ```
 digraph my_graph {
   rankdir = LR; // alternatively TB, BT, or RL
@@ -155,7 +155,7 @@ digraph my_graph {
 
 ## Clusters
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/7.svg)
+![something](/images/posts/elegant-diagrams/7.svg)
 ```
 digraph my_graph {
   rankdir = LR;
@@ -180,7 +180,7 @@ digraph my_graph {
 }
 ```
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/8.svg)
+![something](/images/posts/elegant-diagrams/8.svg)
 ```
 digraph my_graph {
   rankdir = LR;
@@ -212,7 +212,7 @@ digraph my_graph {
 
 ## Records
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/9.svg)
+![something](/images/posts/elegant-diagrams/9.svg)
 ```
 digraph my_graph {
   node [shape = record];
@@ -223,7 +223,7 @@ digraph my_graph {
 }
 ```
 
-![something]({{ site.url }}/images/posts/elegant-diagrams/10.svg)
+![something](/images/posts/elegant-diagrams/10.svg)
 ```
 digraph my_graph {
   node [shape = record];

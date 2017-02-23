@@ -36,7 +36,7 @@ websockets do two main things:
 
 First let's examine what a typical web page request looks like:
 
-![A server and client connecting without websockets]({{ site.url }}/images/oldschool.gif)
+![A server and client connecting without websockets](/images/oldschool.gif)
 
 The key to remember in this scenario is that the server does not have the
 ability to talk to the web browser unless the web browser asks for something.
@@ -48,7 +48,7 @@ Using websockets, the server breaks out of this mold and finds a faster, more
 open method of communication with the web browser that functions more like a
 "phone call."
 
-![A server and a client connection with websockets]({{ site.url }}/images/websockets.gif)
+![A server and a client connection with websockets](/images/websockets.gif)
 
 As you can see, once this "phone call" is established, it allows the server to
 send messages to the web browser with being asked for anything; this is a big

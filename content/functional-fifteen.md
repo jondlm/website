@@ -9,8 +9,6 @@ comments    = true
 "Perfecting oneself is as much unlearning as it is learning."
 - Edsger Dijkstra
 
-{{ .Site.BaseURL }}
-
 Functional programming is all the rage these days. It's hard to go to a
 conference, the water cooler, or your grandmas house without hearing about it.
 To initiates it's an insurmountable wall containing droves of intellectual
