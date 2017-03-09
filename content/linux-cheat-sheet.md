@@ -150,7 +150,7 @@ Search the root directory for anything with 'something' in it and pipe that to l
 
 For the best security, you should be using one SSH key per device you use. An
 SSH key can optionally be password protected for extra security. When you
-generate a key, two files are created. One of the private key (don't give it to
+generate a key, two files are created. One is the private key (don't give it to
 anyone), the other is the public key, which is meant to be public.
 
 1. Make sure you don't already have an ssh key you can use, check `~/.ssh`

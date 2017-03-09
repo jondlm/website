@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="65" height="75" viewBox="0, 0, 65, 75">
+  <defs>
+    <linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="-73.509" y1="33" x2="-30.991" y2="33" gradientTransform="matrix(0, -1, 1, 0, 0, 0)">
+      <stop offset="0" stop-color="#0A4FA5"/>
+      <stop offset="1" stop-color="#042144"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1">
+    <g>
+      <path d="M61.505,30.991 C60.679,52.265 43.3,57.382 33.034,73.509 C24.396,58.31 3.978,51.127 4.505,30.991" fill="url(#Gradient_1)"/>
+      <path d="M61.505,30.991 C60.679,52.265 43.3,57.382 33.034,73.509 C24.396,58.31 3.978,51.127 4.505,30.991" fill-opacity="0" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path d="M7.938,43.562 C23.938,55.188 47.938,37.312 61.005,30.491 C61.125,33.5 60.875,35.188 60,38.25 C51.188,44.688 20.375,58.125 11.938,50.938 C10.062,47.938 9.5,47.75 7.938,43.562 z" fill="#000000" fill-opacity="0.108"/>
+    <path d="M61.505,30.991 C60.679,52.265 43.3,57.382 33.034,73.509 C24.396,58.31 3.978,51.127 4.505,30.991" fill-opacity="0" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <path d="M61.505,30.991 C20.362,57.496 6.446,48.316 4.699,34.24 C4.568,33.18 4.505,32.093 4.505,30.991 C4.505,15.251 17.265,2.491 33.005,2.491 C35.901,2.491 38.696,2.923 41.33,3.726 C44.495,4.691 47.426,6.193 50.018,8.124 C56.99,13.319 61.505,21.628 61.505,30.991 z" fill="#042144"/>
+      <path d="M61.505,30.991 C20.362,57.496 6.446,48.316 4.699,34.24 C4.568,33.18 4.505,32.093 4.505,30.991 C4.505,15.251 17.265,2.491 33.005,2.491 C35.901,2.491 38.696,2.923 41.33,3.726 C44.495,4.691 47.426,6.193 50.018,8.124 C56.99,13.319 61.505,21.628 61.505,30.991 z" fill-opacity="0" stroke="#FFFFFF" stroke-width="3"/>
+    </g>
+    <path d="M4.199,33.74 C4.199,33.74 20.125,9.938 49.518,7.624 C23.562,-7.438 2.188,13.375 4.199,33.74 z" fill="#FFFFFF" fill-opacity="0.176"/>
+  </g>
+</svg>

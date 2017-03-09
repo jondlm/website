@@ -1,0 +1,22 @@
+{{ partial "head.html" . }}
+<body>
+  {{ partial "nav.html" . }}
+
+  <div class="feature">
+    <img
+      class="feature-image"
+      src="{{ .Site.BaseURL }}images/swing6.svg"
+      alt="The coolest logo you've never not seen"
+    />
+
+    <h1 class="feature-title">{{ .Site.Title }}</h1>
+    <h2 class="feature-subtitle">{{ .Site.Params.description }}</h2>
+  </div>
+
+  {{ partial "posts.html" . }}
+
+
+  {{ partial "footer.html" . }}
+  {{ partial "js.html" . }}
+</body>
+</html>
