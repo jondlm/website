@@ -57,6 +57,11 @@ writing **everything** I learned down. Maybe this stuff will help someone else.
   sort | uniq -c` recursively count files in sub directories of the current
   directory
 
+## Disk management
+
+- `fdisk -l` list available devices
+- `lsblk` list available devices, easier to read, less detail
+
 ### [`fswatch`][fswatch]
 
 - `fswatch -l 0.2 -r src/**/*.spec.* | xargs -n1 program` watch all `.spec.` files and run them through `program` every time you save with a 200ms delay
@@ -107,6 +112,11 @@ Search the root directory for anything with 'something' in it and pipe that to l
 - `sudo tcpdump -A -s 10240 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)' | egrep --line-buffered "^........(GET |HTTP\/|POST |HEAD )|^[A-Za-z0-9-]+: " | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g'`
   see all HTTP headers on port 80. Credit to an [SO post](http://serverfault.com/a/633452).
 
+- `dig jondelamotte.com` get dns info for a domain, better than the deprecated `nslookup`
+- `dig jondelamotte.com ANY` get all dns records for a domain
+- `dig jondelamotte.com +short` just show record value
+- `dig -x 192.30.252.153` reverse lookup
+
 ## User management
 
 - `usermod -a -G youre_mobile jon` add existing user to existing group
@@ -134,15 +144,19 @@ Search the root directory for anything with 'something' in it and pipe that to l
 - `unset SOMETHING` remove an env variable
 - `echo $SOMETHING` print out an env variable
 
-### Set time zone
-
-1. `sudo rm /etc/localtime`
-2. `sudo ln -s /usr/share/zoneinfo/US/Pacific /etc/localtime`
+## Time
 
 - `date —iso8601=seconds -u` displays iso 8601 date time for UTC. Some version of linux don't have this flag, see below
 - `date +%FT%T%z` displays iso 8601 local and works with all versions of `date`
 - `date -d '4 days ago'` relative dates
 - `date -d @1433177641` convert from epoch to human readable
+- `cal` show the current month's calendar
+- `cal 12 1999` show the calendar for December 1999
+
+### Set time zone
+
+1. `sudo rm /etc/localtime`
+2. `sudo ln -s /usr/share/zoneinfo/US/Pacific /etc/localtime`
 
 ## Security
 
@@ -162,9 +176,10 @@ and private key while your machine is running
 
 Make sure your `ssh-agent` is running with `ssh-agent bash`
 
-## Distributions
+## System info
 
 - `cat /etc/*-release` to figure out what distro you are running
+- `uname -a` to show kernal information
 
 ## Ubuntu unity
 
