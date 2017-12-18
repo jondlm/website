@@ -111,6 +111,10 @@ Search the root directory for anything with 'something' in it and pipe that to l
   see all HTTP POSTs coming into your box including their payloads
 - `sudo tcpdump -A -s 10240 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)' | egrep --line-buffered "^........(GET |HTTP\/|POST |HEAD )|^[A-Za-z0-9-]+: " | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g'`
   see all HTTP headers on port 80. Credit to an [SO post](http://serverfault.com/a/633452).
+- `tcpdump -lvi any "udp port 53"` view dns traffic
+
+- `ngrep` is a really nice alternative to `tcpdump` especially for tcp traffic like HTTP
+- `ngrep -W byline HTTP` watch tcp traffic for unencrypted HTTP packets and print them out in a readable fashion
 
 - `dig jondelamotte.com` get dns info for a domain, better than the deprecated `nslookup`
 - `dig jondelamotte.com ANY` get all dns records for a domain
@@ -180,6 +184,8 @@ Make sure your `ssh-agent` is running with `ssh-agent bash`
 
 - `cat /etc/*-release` to figure out what distro you are running
 - `uname -a` to show kernal information
+- `lsmod` list drivers
+- `modinfo <name>` more information about a driver
 
 ## Ubuntu unity
 
