@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title        = "~"
-baseURL      = "http://www.jondelamotte.com/"
+baseURL      = "/"
 theme        = "clean"
 
 [Params]
