@@ -1,8 +1,7 @@
 # Jon de la Motte's Blog
 
-This repo contains the files that my statically generated, personal blog runs
-off. I am using Netlify and Hugo. Merged to master are automatically built and
-deployed.
+This repo contains the files that my static personal blog runs off. I am using
+Netlify and Hugo. Merges to master are automatically built and deployed.
 
 ## Thanks
 

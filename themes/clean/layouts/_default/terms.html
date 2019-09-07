@@ -1,5 +1,5 @@
 {{ partial "head.html" . }}
-<body>
+
   {{ partial "nav.html" . }}
 
   <h1>Tags</h1>
@@ -10,10 +10,10 @@
       <th>Count</th>
     </thead>
     <tbody>
-      {{ range $key, $value := .Data.Terms.ByCount }}
+      {{ range .Data.Terms.ByCount }}
         <tr>
-          <td><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }}</a></td>
-          <td>{{ $value.Count }}</td>
+          <td><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></td>
+          <td>{{ .Count }}</td>
         </tr>
       {{ end }}
     </tbody>
