@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 /* -------------------------------------------------------------------------- */
 /* Globals                                                                    */
@@ -18,35 +17,42 @@ a, a:visited, a:focus, a:active {
   text-decoration: none;
 }
 
-/*
-body {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 20px;
-}
-
-pre code {
-  padding: 20px;
-}
-
 code {
-  background-color: var(--gray-03);
-  padding: 2px;
-  border: solid 1px #ddd;
-  border-radius: 2px;
+  @apply rounded bg-gray-200 px-1 text-sm;
 }
 
-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
+
+/* -------------------------------------------------------------------------- */
+/* Components                                                                 */
+/* -------------------------------------------------------------------------- */
+
+
+.post p {
+  @apply my-2;
 }
 
-th {
-  border-bottom: 1px solid #eee;
+.post h1 {
+  @apply text-2xl mb-4 mt-6;
 }
 
-th, td {
-  text-align: left;
+.post h2 {
+  @apply text-xl mb-4 mt-6;
 }
-*/
+
+.post h3 {
+  @apply text-lg mb-4 mt-6;
+}
+
+.post h4 {
+  @apply text-base mb-4 mt-6;
+}
+
+.post ul {
+  @apply list-disc pl-4;
+}
+
+.post li {
+  @apply mb-2;
+}
+
+@tailwind utilities;

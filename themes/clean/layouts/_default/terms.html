@@ -10,7 +10,7 @@
       <th>Count</th>
     </thead>
     <tbody>
-      {{ range .Data.Terms.ByCount }}
+      {{ range .Site.Taxonomies.tags.ByCount }}
         <tr>
           <td><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></td>
           <td>{{ .Count }}</td>

@@ -631,6 +631,76 @@ video {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+
+/* Globals                                                                    */
+
+/* -------------------------------------------------------------------------- */
+
+a {
+  color: #428bca;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a, a:visited, a:focus, a:active {
+  text-decoration: none;
+}
+
+code {
+  border-radius: 0.25rem;
+  background-color: #edf2f7;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Components                                                                 */
+
+/* -------------------------------------------------------------------------- */
+
+.post p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.post h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.post h3 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.post h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.post ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.post li {
+  margin-bottom: 0.5rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -11365,58 +11435,7 @@ video {
   z-index: auto;
 }
 
-/* -------------------------------------------------------------------------- */
-
-/* Globals                                                                    */
-
-/* -------------------------------------------------------------------------- */
-
-a {
-  color: #428bca;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a, a:visited, a:focus, a:active {
-  text-decoration: none;
-}
-
-/*
-body {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 20px;
-}
-
-pre code {
-  padding: 20px;
-}
-
-code {
-  background-color: var(--gray-03);
-  padding: 2px;
-  border: solid 1px #ddd;
-  border-radius: 2px;
-}
-
-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-th {
-  border-bottom: 1px solid #eee;
-}
-
-th, td {
-  text-align: left;
-}
-*/
-
-@media (min-width: 640px) {
+@media print, (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
     width: 1px;
@@ -22152,7 +22171,7 @@ th, td {
   }
 }
 
-@media (min-width: 768px) {
+@media print, (min-width: 768px) {
   .md\:sr-only {
     position: absolute;
     width: 1px;
@@ -32888,7 +32907,7 @@ th, td {
   }
 }
 
-@media (min-width: 1024px) {
+@media print, (min-width: 1024px) {
   .lg\:sr-only {
     position: absolute;
     width: 1px;
