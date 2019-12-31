@@ -3,6 +3,17 @@ title = "Resume - Jon de la Motte"
 type = "page"
 +++
 
+<style>
+  [data-viz] {
+    background: linear-gradient(90deg, #b2f5ea 0%, #b2f5ea 50%, #f7fafc 50%);
+    background-position-x: 100%;
+    background-size: 200%;
+
+    transition: background-position-x ease-in-out 600ms,
+      min-width ease-in-out 600ms;
+  }
+</style>
+
 <section class="flex items-center justify-end pb-4">
   <div class="mr-auto">
     <h1 class="text-4xl md:text-6xl">Jon de la Motte</h1>
@@ -10,18 +21,13 @@ type = "page"
       Full Stack Developer - Portland, OR
     </p>
   </div>
-  <img
-    class="flex-grow-0 h-0 w-0 md:h-20 md:w-20 rounded-full rounded-r-none mr-2"
-    src="https://1.gravatar.com/avatar/126c1ea4fdb20bbb85c3ff735b7b0964?s=200"
-    alt="A picture of Jon de la Motte standing in front of a brick wall. He's got a fresh hipster haircut and mustache."
-  />
-  <div class="">
+  <div class="text-right">
     <p class="mb-1 text-sm">jondlm@gmail.com</p>
     <p class="mb-1 text-sm">503 261 3636</p>
     <p class="mb-1 text-sm">
       <a href="https://jondelamotte.com">jondelamotte.com</a>
     </p>
-    <p class="mb-1 text-sm flex items-center">
+    <p class="mb-1 text-sm justify-end flex items-center">
       <a href="https://github.com/jondlm">jondlm</a>
       <svg
         class="w-4 h-4 inline fill-current text-gray-700 ml-1"
@@ -36,6 +42,11 @@ type = "page"
       </svg>
     </p>
   </div>
+  <img
+    class="flex-grow-0 h-0 w-0 md:h-20 md:w-20 rounded-full rounded-l-none ml-2"
+    src="https://1.gravatar.com/avatar/126c1ea4fdb20bbb85c3ff735b7b0964?s=200"
+    alt="A picture of Jon de la Motte standing in front of a brick wall. He's got a fresh hipster haircut and mustache."
+  />
 </section>
 
 <div class="text-sm">
@@ -54,68 +65,192 @@ type = "page"
       Kubernetes deployment tool
     </div>
 
-    <h3 class="text-lg mb-2 mt-4">Languages</h3>
+    <div class="flex items-center mb-2 mt-4">
+      <h3 class="text-lg ">Languages</h3>
+      <button
+        class="text-xs ml-auto bg-teal-400 hover:bg-teal-700 text-white px-2 rounded"
+        title="This visualization shows my relative level of comfort for each given item. The more filled in the bar, the more comfortable I am with the item in particular."
+        data-hook="show-viz"
+      >
+        toggle viz
+      </button>
+    </div>
     <ul class="flex flex-wrap text-xs">
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="100"
+      >
         JavaScript
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="80"
+      >
         TypeScript
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Go</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Elixir</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Rust</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Bash</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Elm</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="55"
+      >
+        Go
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="40"
+      >
+        Elixir
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="35"
+      >
+        Rust
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="80"
+      >
+        Bash
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="55"
+      >
+        Elm
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="35"
+      >
         Clojure
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Ruby</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="40"
+      >
+        Ruby
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="20"
+      >
         Haskell
       </li>
     </ul>
 
     <h3 class="text-lg mb-2 mt-4">General</h3>
     <ul class="flex flex-wrap text-xs">
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="90"
+      >
         Kubernetes
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Docker</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="90"
+      >
+        Docker
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="100"
+      >
         Node.js
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="80"
+      >
         Hapi.js
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="80"
+      >
         Express
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="40"
+      >
         Elasticsearch
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">SQL</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Unix</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">React</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="70"
+      >
+        SQL
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="90"
+      >
+        Unix
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="100"
+      >
+        React
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="85"
+      >
         Webpack
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Babel</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">CSS</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Less</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Sass</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="80"
+      >
+        Babel
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="100"
+      >
+        CSS
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="100"
+      >
+        Less
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="75"
+      >
+        Sass
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="60"
+      >
         CSS-in-JS
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">SVG</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
-        Data Visualization
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="80"
+      >
+        SVG
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Testing</li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="60"
+      >
+        Data Viz
+      </li>
+      <li
+        class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+        data-viz="55"
+      >
+        Testing
+      </li>
     </ul>
 
-    <ul class="flex flex-wrap text-xs">
-    </ul>
+    <ul class="flex flex-wrap text-xs"></ul>
   </div>
 
   <header class="flex items-baseline">
@@ -134,7 +269,7 @@ type = "page"
     Originally hired on as a front-end engineer to work on the main UI product
     that was written in PHP and jQuery. Helped form a grassroots movement to
     convert UIs to React. Helped drive React adoption that ultimately decreased
-    bugs and improved developer velocity. Wrote two large React component
+    bugs and improved developer velocity. Authored two large React component
     libraries:
     <a href="https://github.com/appnexus/lucid">Lucid</a> and its extension that
     was proprietary and internal. Gave two (<a
@@ -145,11 +280,10 @@ type = "page"
   </p>
 
   <p class="mb-2">
-    Participated in the evaluation of and was the first engineer to run
-    production services on Kubernetes at the company. Helped lead a large
-    project that migrated the entire UI stack to Kubernetes; the net result was
-    geographically redundant deployment and far more stable deployments and
-    infrastructure compared to our existing homegrown solutions. Other
+    Helped evaluate and was the first engineer to run production services on
+    Kubernetes at the company. Helped lead a large project that migrated the
+    entire UI stack to Kubernetes; the net result was a geographically redundant
+    system that was more reliable than our previous homegrown solutions. Other
     highlights:
   </p>
 
@@ -159,9 +293,10 @@ type = "page"
       for all our microservice UIs.
     </li>
     <li>
-      Original contributor to the
+      Authored and contributed to the
       <a href="https://github.com/appnexus/ankh">Ankh</a> tool written in Go
-      which became the de-facto deployment tool for Kubernetes services.
+      which became the de-facto deployment tool for Kubernetes services within
+      the company.
     </li>
     <li>
       Wrote and maintained a CLI that bootstrapped UI apps when the company
@@ -213,11 +348,11 @@ type = "page"
     </aside>
   </header>
   <p class="mb-2">
-    Built a new mobile responsive website for CSG based on designer
-    specifications. Used the following technologies: Node, Express and Azure.
-    Built the company's first HTML5 dashboard with a Node back-end. Used client
-    side JavaScript to create rich interaction and data filtering. It used AJAX,
-    JavaScript, and plenty of JSON over HTTP.
+    Built a new responsive website for CSG based on designer specifications.
+    Used the following technologies: Node, Express and Azure. Built the
+    company's first HTML5 dashboard with a Node back-end. Used client side
+    JavaScript to create rich interaction and data filtering using AJAX,
+    JavaScript, and JSON over HTTP.
   </p>
   <p class="mb-2">
     Moved web development forward at CSG by educating peers and introducing
@@ -257,3 +392,31 @@ type = "page"
     </aside>
   </header>
 </div>
+
+<script>
+  const showViz = document.querySelector('[data-hook="show-viz"]');
+  const vizes = document.querySelectorAll("[data-viz]");
+  let vizIsShown = false;
+
+  // Precalculate the width of each viz item for use with animations later on
+  vizes.forEach(viz => {
+    const originalWidth = viz.getBoundingClientRect().width;
+    viz.dataset.originalWidth = originalWidth;
+    viz.style.setProperty("min-width", `${originalWidth}px`);
+    viz.setAttribute("title", `${viz.dataset.viz}% relative comfort level`);
+  });
+
+  showViz.addEventListener("click", e => {
+    vizIsShown = !vizIsShown;
+    vizes.forEach(viz => {
+      viz.style.setProperty(
+        "min-width",
+        vizIsShown ? "6rem" : `${viz.dataset.originalWidth}px`
+      );
+      viz.style.setProperty(
+        "background-position-x",
+        vizIsShown ? `${100 - parseInt(viz.dataset.viz, 10)}%` : "100%"
+      );
+    });
+  });
+</script>

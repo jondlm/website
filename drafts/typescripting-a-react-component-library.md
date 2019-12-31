@@ -22,6 +22,10 @@ Common issues:
 
 - Am I supposed to be using a `ReactNode` or a `ReactElement` here?
 
+Tips:
+
+If you're doing pass throughs, just inspect the signature for a raw element and copy that to your own `extend`.
+
 ### Don't assume your types are sound just cause your code compiled
 
 I've written a decent amount of code in other more "sound" languages such as
@@ -63,6 +67,8 @@ We spent a bunch of time trying to get react docgen and storybook to integrate
 nicely with our shiny types but it ended up being a big waste of time. Instead
 we've decided to lean on TypeDoc and people's IDE's to give them good API
 documentation and instead leave our storybook examples more "story" like.
+
+### Consider using `Overwrite` from `type-zoo` when you need to pass props through to html elements
 
 [l]: https://github.com/appnexus/lucid
 [ut]: https://www.typescriptlang.org/docs/handbook/utility-types.html
