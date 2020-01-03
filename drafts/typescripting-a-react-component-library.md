@@ -8,22 +8,25 @@ tags        = ["react", "typescript", "diagrams"]
 ## Summary
 
 For the last few months I've been deep diving into TypeScript. I've been
-working with team to convert [lucid][l] over to TypeScript. As it turns out
-converting a large, pre-existing React component library can be a challenge. At
-the onset of the project I naively assumed we weren't relying too much on the
-crazier sides of JavaScript. I was wrong. Turns out people tend to use features
+working with my team to convert [lucid][l] over to TypeScript. Surprise,
+surprise: converting a large React component library is a big challenge. At the
+onset of the project I naively assumed we weren't relying too much on the
+crazier sides of JavaScript. I was wrong. Turns out devs tend to use features
 if they're available in all kinds of crazy ways (myself included).
 
-Here are a few of my key take aways from the project so far:
+This post is an attempt to outline some of the things I wish I'd known ealier
+on. Here are a few of my key take aways from the project so far:
 
 ### Learning React's types and when to use them is challenging
 
 Common issues:
 
 - Am I supposed to be using a `ReactNode` or a `ReactElement` here?
+- This type extends something that extends another type that extends... which one should I use?
 
 Tips:
 
+- If you're tring to 
 If you're doing pass throughs, just inspect the signature for a raw element and copy that to your own `extend`.
 
 ### Don't assume your types are sound just cause your code compiled
