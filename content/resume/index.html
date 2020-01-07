@@ -13,6 +13,12 @@ omit_highlighting = true
     transition: background-position-x ease-in-out 600ms,
       min-width ease-in-out 600ms;
   }
+
+  @media print {
+    [data-hook="show-viz"] {
+      display: none;
+    }
+  }
 </style>
 
 <section class="flex items-center justify-end pb-4">
