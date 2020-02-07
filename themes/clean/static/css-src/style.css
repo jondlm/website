@@ -23,6 +23,10 @@ code {
   @apply rounded bg-gray-200 px-1 text-sm;
 }
 
+pre > code {
+  @apply p-4;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /* Components                                                                 */
@@ -34,7 +38,7 @@ code {
 }
 
 .post h1 {
-  @apply text-2xl mb-4 mt-6;
+  @apply text-4xl mb-4 mt-6;
 }
 
 .post h2 {
