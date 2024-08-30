@@ -75,7 +75,7 @@ img:hover {
 ```
 
 <div id="kittydiv">
-  <img id="kitty" src='http://placekitten.com/300/300'>
+  <img id="kitty" src='https://placekitten.com/300/300'>
 </div>
 
 In chrome, the effect is startling. The image disappears into a tiny dot before reappearing. Strange.
@@ -98,7 +98,7 @@ img:hover {
 ```
 
 <div id="kittydiv2">
-  <img id="kitty2" src='http://placekitten.com/300/300'>
+  <img id="kitty2" src='https://placekitten.com/300/300'>
 </div>
 
 The solution is to make sure you explicitly define a `width` and `height` before you change them.

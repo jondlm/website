@@ -78,11 +78,11 @@ applied to all your images.
 
 You write:
 
-    ![picture alt](http://placekitten.com/500 "Hover text")
+    ![picture alt](https://placekitten.com/500 "Hover text")
 
 And this comes out:
 
-![picture alt](http://placekitten.com/500 "Hover text")
+![picture alt](https://placekitten.com/500 "Hover text")
 
 ## Blockquotes
 
