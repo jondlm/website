@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2015-06-01
+modified: 2015-12-23
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
