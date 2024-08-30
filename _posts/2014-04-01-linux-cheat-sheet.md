@@ -140,6 +140,10 @@ and private key while your machine is running
 
 Make sure your `ssh-agent` is running with `ssh-agent bash`
 
+## Distributions
+
+- `cat /etc/*-release` to figure out what distro you are running
+
 ## Ubuntu unity
 
 - `ctrl + alt + num5` hit any of the numpad numbers to align the windows
