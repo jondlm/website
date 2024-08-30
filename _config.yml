@@ -38,7 +38,7 @@ bing_verify:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles
 future:      true
-pygments:    true
+highlighter: 'pygments'
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
@@ -72,8 +72,6 @@ exclude:
   - "Rakefile.rb"
   - "tmp"
   - "less"
-  - "*.sublime-project"
-  - "*.sublime-workspace"
   - "test"
   - "spec"
   - "Gruntfile.js"

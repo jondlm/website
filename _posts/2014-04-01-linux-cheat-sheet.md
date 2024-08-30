@@ -88,6 +88,10 @@ Search the root directory for anything with 'something' in it and pipe that to l
 - `dpkg —get-selections` lists packages that are installed
 - `which man` or `which node` find where your binary is located on the file system
 
+## Utilities
+
+- `git tag | sort -V -r | head` find the latest git tag versions, the `-V` is a version sort for gnu sort
+
 ## Networking
 
 - `/etc/hosts` is a file that is like a personal DNS. You can map custom IPs to hostnames in it
