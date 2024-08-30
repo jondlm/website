@@ -1,6 +1,6 @@
 +++
 title       = "Common React Performance Issue"
-description = "Learn about a very common performance pitfall and how to fix it"
+description = "Learn about a common React performance pitfall and how to fix it"
 date        = "2017-03-09"
 tags        = ["react", "perf"]
 +++
@@ -82,10 +82,10 @@ I measured three things for my benchmarks: 1) initial render time, 2) first
 selection click time, and 3) subsequent selection click time. Here are the
 average results of my informal, manual testing (5 samples):
 
-|          | Initial Render (ms) | Initial Select (ms) | Subsequent Selects (ms) |
-| ----     | ------------------- | ------------------- | ----------------------- |
-| **Bad**  | 381.166             | 2633.87             | 31.94                   |
-| **Good** | 285.396             | 16.876              | 8.022                   |
+|                  | Initial Render (ms) | Initial Select (ms) | Subsequent Selects (ms) |
+| ---------------- | ------------------- | ------------------- | ----------------------- |
+| [**Bad**][bad]   | 381.166             | 2633.87             | 31.94                   |
+| [**Good**][good] | 285.396             | 16.876              | 8.022                   |
 
 By simply not creating an anonymous function in the `render`, we're able to
 drastically improve the performance. Instead we can rely on a `data-foo`
