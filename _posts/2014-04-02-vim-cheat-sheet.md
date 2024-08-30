@@ -13,16 +13,22 @@ share: true
 ---
 
 Vim is hard. Vim is scary. So was Git the first time I used it. If you stick
-with it, you'll never want to use another text editor.
+with it, you'll never want to use another text editor. Also see my [vimrc] if
+you're into that kind of thing.
 
 General
 
 - `:edit` reloads the current file
 - `ctrl-e` open/close NERDTree sidebar
 
+Selecting
+
+- `vip` visually select the current paragraph
+
 Line breaking
 
 - `gqq` breaks lines so they don't exceed 80 characters, AWESOME!
+- `gqip` break lines for the current paragraph
 - `:set textwidth=80` super handy for auto line breaking, use with `gqq` too
 
 Sorting
@@ -33,6 +39,7 @@ Sorting
 
 Folding
 
+- `:set foldmethod=indent` turn on folding by indentation
 - `zM` fold everything
 - `zR` unfold everything
 
@@ -69,6 +76,8 @@ Screen movement
 
 Etcetera
 
-add `autocmd BufNewFile,BufRead *.jade set filetype=jade` to `.vimrc` to ensure
+Add `autocmd BufNewFile,BufRead *.jade set filetype=jade` to `.vimrc` to ensure
 .jade files have their type set correctly. Works for other stuff too.
+
+[vimrc]: https://github.com/jondlm/jvim/blob/master/.vimrc
 
