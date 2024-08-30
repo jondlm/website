@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "private": true,
+  "version": "0.0.1",
+  "description": "This repo contains the files that my static personal blog runs off. I am using Netlify and Hugo. Merges to master are automatically built and deployed.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jondlm/website.git"
+  },
+  "scripts": {
+    "build": "tailwind build themes/clean/static/css-src/style.css -o themes/clean/static/css/style.css",
+    "shrink": "purgecss --css themes/clean/static/css/style.css --content '**/*.html' --out themes/clean/static/css/"
+  },
+  "keywords": [],
+  "author": "Jon de la Motte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jondlm/website/issues"
+  },
+  "homepage": "https://github.com/jondlm/website#readme",
+  "dependencies": {
+    "purgecss": "^1.4.0",
+    "tailwindcss": "^1.1.2"
+  }
+}

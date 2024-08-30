@@ -2,9 +2,11 @@
 
   {{ partial "nav.html" . }}
 
-  <h1>{{ .Title }}</h1>
-
-  {{ partial "posts.html" . }}
+  <article>
+    <section>
+        {{ .Content }}
+    </section>
+  </article>
 
   {{ partial "footer.html" . }}
   {{ partial "js.html" . }}

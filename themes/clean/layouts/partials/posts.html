@@ -1,16 +1,16 @@
 <ul class="posts">
   {{ range .Site.RegularPages }}
     {{ $url := replace .Permalink .Site.BaseURL "" }}
-    <li class="posts-item">
-      <div class="posts-item-title-bar">
+    <li class="flex flex-col pb-8">
+      <div class="flex items-baseline justify-between">
         <a href="{{ .Permalink }}">
-          <h3 class="posts-item-title">{{ .Title }}</h3>
+          <h3 class="text-xl">{{ .Title }}</h3>
         </a>
 
-        <div class="posts-item-date">{{ .Date.Format "2006-01" }}</div>
+        <div class="text-gray-600">{{ .Date.Format "2006-01" }}</div>
       </div>
 
-      <h4 class="posts-item-description">{{ .Description | markdownify }}</h4>
+      <h4 class="text-gray-500 text-xs pr-16">{{ .Description | markdownify }}</h4>
 
     </li>
   {{ end }}

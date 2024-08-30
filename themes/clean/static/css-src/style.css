@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------------------- */
+/* Globals                                                                    */
+/* -------------------------------------------------------------------------- */
+
+a {
+  color: #428bca;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a, a:visited, a:focus, a:active {
+  text-decoration: none;
+}
+
+/*
+body {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 20px;
+}
+
+pre code {
+  padding: 20px;
+}
+
+code {
+  background-color: var(--gray-03);
+  padding: 2px;
+  border: solid 1px #ddd;
+  border-radius: 2px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 1px solid #eee;
+}
+
+th, td {
+  text-align: left;
+}
+*/
