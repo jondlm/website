@@ -1,16 +1,10 @@
----
-layout: post
-title: The Ultimate Mac, Vim, and Tmux setup
-description: "My personal mac setup"
-modified: 2014-08-08
-tags: [mac,vim,tmux,iterm2,zsh,solarized,homebrew]
-image:
-  feature: abstract-7.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "The Ultimate Mac, Vim, and Tmux setup"
+description = "My personal mac setup"
+date        = "2014-08-08"
+tags        = ["mac", "vim", "tmux", "iterm2", "zsh", "solarized", "homebrew"]
+comments    = true
++++
 
 I grew up using Macs, was forced back to Windows for a job, worked on Ubuntu
 for a while, and now have finally landed back in the Mac realm. After having

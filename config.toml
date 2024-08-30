@@ -1,3 +1,9 @@
 languageCode = "en-us"
-title = "Blog"
-baseURL = "http://www.jdelamotte.com/"
+title        = "Blog"
+baseURL      = "http://www.jondelamotte.com/"
+theme        = "hugo-privacy-cactus-theme"
+
+[Params]
+
+name   = "Jon de la Motte"
+bio    = "Nfne"

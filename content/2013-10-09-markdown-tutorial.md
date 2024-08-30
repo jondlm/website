@@ -1,16 +1,10 @@
----
-layout: post
-title: Introductory Markdown Tutorial
-description: "What the heck is Markdown? How the frick can I just write stuff in it? Find some answers here!"
-modified: 2013-10-09
-tags: [markdown,content,blog-writing]
-image:
-  feature: abstract-3.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Introductory Markdown Tutorial"
+description = "What the heck is Markdown? How the frick can I just write stuff in it? Find some answers here!"
+date        = "2013-10-09"
+tags        = ["markdown", "content", "blog-writing"]
+comments    = true
++++
 
 Markdown is a way of writing text that gets automatically transformed into
 websites. Simply put, Markdown is the best way to write content for the
@@ -162,11 +156,11 @@ You write:
 
 And this comes out:
 
-{% highlight javascript %}
+```javascript
 function sqrt(number) {
   return Math.pow(number, 0.5);
 }
-{% endhighlight %}
+```
 
 ## Horizontal rules
 

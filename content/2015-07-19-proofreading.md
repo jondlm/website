@@ -1,16 +1,10 @@
----
-layout: post
-title: The HAYR Method
-description: "A new technique to improve your proofreading skills"
-modified: 2015-07-19
-tags: [writing]
-image:
-  feature: abstract-2.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "The HAYR Method"
+description = "A new technique to improve your proofreading skills"
+date        = "2015-07-19"
+tags        = ["writing"]
+comments    = true
++++
 
 ## HAYR: Highlight as You Read
 

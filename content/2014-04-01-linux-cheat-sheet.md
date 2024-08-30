@@ -1,16 +1,10 @@
----
-layout: post
-title: Linux Cheat Sheet
-description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2016-04-13
-tags: [cheat-sheet,linux,ubuntu]
-image:
-  feature: abstract-8.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Linux Cheat Sheet"
+description = "My personal Linux cheat sheet, mostly Ubuntu"
+date        = "2016-04-13"
+tags        = ["cheat-sheet", "linux", "ubuntu"]
+comments    = true
++++
 
 Linux is hard. Really hard. I didn't start getting good at it until I started
 writing **everything** I learned down. Maybe this stuff will help someone else.

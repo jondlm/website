@@ -37,13 +37,13 @@ things, like color and font size, shouldn't (notice I didn't say *can't*) be
 found in your HTML. It's also important to note that written within your HTML
 documents are the links to CSS and JavaScript files.
 
-{% highlight html %}
+```html
 <!-- I'm a comment -->
 
 <div class="poobar">
   Ahoy there! I'm HTML. Nice to meet you.
 </div>
-{% endhighlight %}
+```
 
 ### CSS
 
@@ -59,14 +59,14 @@ Once the link is established, your HTML page automatically uses the CSS to make
 things pretty and consistent. Don't be fooled, CSS may be a relatively small
 language, but it gets complicated really quickly.
 
-{% highlight css %}
+```css
 /* I'm a comment */
 
 .poobar {
   font-size: 20px;
   color: blue;
 }
-{% endhighlight %}
+```
 
 
 ### JavaScript
@@ -90,12 +90,12 @@ Old browsers do some pretty funky things with JavaScript. Libraries like
 your JavaScript. Personally I've chosen to mostly ignore older browsers in the
 hopes that they will disappear shortly. That's how it works, right?!
 
-{% highlight javascript %}
+```javascript
 // I'm a comment
 
 var thingy = document.querySelector('.poobar');
 thingy.innerText = 'Changing the content of the HTML with JavaScript.';
-{% endhighlight %}
+```
 
 ### Boom
 

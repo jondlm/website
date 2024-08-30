@@ -1,0 +1,3 @@
+[submodule "themes/hugo-privacy-cactus-theme"]
+	path = themes/hugo-privacy-cactus-theme
+	url = git@github.com:lucaspiller/hugo-privacy-cactus-theme.git

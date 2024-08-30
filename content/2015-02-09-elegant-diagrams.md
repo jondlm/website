@@ -1,16 +1,10 @@
----
-layout: post
-title: Elegant Diagrams
-description: "An intro to Graphviz"
-modified: 2015-02-09
-tags: [graphviz,diagrams]
-image:
-  feature: abstract-3.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Elegant Diagrams"
+description = "An intro to Graphviz"
+date        = "2015-02-09"
+tags        = ["graphviz", "diagrams"]
+comments    = true
++++
 
 Diagrams. Everyone loves them, and I hate to make them. That changed recently
 when I discovered a nifty tool called *graphviz*. Think of it like markdown for
@@ -36,9 +30,9 @@ similar process for Linux. All you need to do is install the *graphviz*
 homebrew package. This will make available a suite of command line tools. We're
 interested in `dot`.
 
-{% highlight bash %}
+```bash
 brew install graphviz
-{% endhighlight %}
+```
 
 ## Learn by example
 
@@ -51,9 +45,9 @@ To make a new graph, simply save a text file with the extension `.dot`. You
 don't technically need the extension, but it helps keep things orderly. To
 render the graph to svg (my personal favorite format) use a command like this:
 
-{% highlight bash %}
+```bash
 dot -o myfile.svg myfile.dot -Tsvg
-{% endhighlight %}
+```
 
 Rather than explain all the details of the dot language. Let's take a look at
 a bunch of examples and leave it to your fine brain to work out the rest. Look
@@ -62,17 +56,17 @@ below each diagram for their corresponding DOT code.
 ## Basics
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/1.svg)
-{% highlight text %}
+```
 graph my_graph {
   joe   [label = "Joe"];
   sally [label = "Sally"];
   frank [label = "Frank"];
   susan [label = "Susan"];
 }
-{% endhighlight %}
+```
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/2.svg)
-{% highlight text %}
+```
 graph my_graph {
   node  [shape = box];
 
@@ -81,20 +75,20 @@ graph my_graph {
   frank [label = "Frank"];
   susan [label = "Susan"];
 }
-{% endhighlight %}
+```
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/3.svg)
-{% highlight text %}
+```
 graph my_graph {
   joe   [label = "Joe", shape = box];
   sally [label = "Sally"];
   frank [label = "Frank"];
   susan [label = "Susan"];
 }
-{% endhighlight %}
+```
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/4.svg)
-{% highlight text %}
+```
 graph my_graph {
   joe   [label = "Joe"];
   sally [label = "Sally"];
@@ -107,10 +101,10 @@ graph my_graph {
   sally -- frank;
   sally -- susan;
 }
-{% endhighlight %}
+```
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/4.1.svg)
-{% highlight text %}
+```
 graph my_graph {
   joe   [label = "Joe"];
   sally [label = "Sally"];
@@ -123,10 +117,10 @@ graph my_graph {
   sally -- frank;
   sally -- susan;
 }
-{% endhighlight %}
+```
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/5.svg)
-{% highlight text %}
+```
 digraph my_graph {
   joe   [label = "Joe"];
   sally [label = "Sally"];
@@ -139,10 +133,10 @@ digraph my_graph {
   sally -> frank;
   sally -> susan;
 }
-{% endhighlight %}
+```
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/6.svg)
-{% highlight text %}
+```
 digraph my_graph {
   rankdir = LR; // alternatively TB, BT, or RL
 
@@ -157,12 +151,12 @@ digraph my_graph {
   sally -> frank;
   sally -> susan;
 }
-{% endhighlight %}
+```
 
 ## Clusters
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/7.svg)
-{% highlight text %}
+```
 digraph my_graph {
   rankdir = LR;
 
@@ -184,10 +178,10 @@ digraph my_graph {
   sally -> frank;
   sally -> susan;
 }
-{% endhighlight %}
+```
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/8.svg)
-{% highlight text %}
+```
 digraph my_graph {
   rankdir = LR;
 
@@ -214,12 +208,12 @@ digraph my_graph {
   sally -> frank;
   sally -> susan;
 }
-{% endhighlight %}
+```
 
 ## Records
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/9.svg)
-{% highlight text %}
+```
 digraph my_graph {
   node [shape = record];
   rankdir = LR;
@@ -227,10 +221,10 @@ digraph my_graph {
   people [label = "<people> people | <id> id | <name> name | <car_id> car_id"]
   cars   [label = "<cars> cars | <id> id"]
 }
-{% endhighlight %}
+```
 
 ![something]({{ site.url }}/images/posts/elegant-diagrams/10.svg)
-{% highlight text %}
+```
 digraph my_graph {
   node [shape = record];
   rankdir = LR;
@@ -240,7 +234,7 @@ digraph my_graph {
 
   people:car_id -> cars:id;
 }
-{% endhighlight %}
+```
 
 ## Further reading
 

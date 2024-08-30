@@ -1,16 +1,10 @@
----
-layout: post
-title: Learning Rails
-description: "A short and mostly meaningless post about learning rails. No code examples."
-modified: 2013-12-02
-tags: [rails,ruby,thoughts]
-image:
-  feature: abstract-11.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Learning Rails"
+description = "A short and mostly meaningless post about learning rails. No code examples."
+date        = "2013-12-02"
+tags        = ["rails", "ruby", "thoughts"]
+comments    = true
++++
 
 Recently I started learning Ruby on Rails. Mainly because it's in high demand
 and ruby is supposed to be a clean, expressive language. Just being honest.
@@ -38,7 +32,3 @@ framework can save a ton of time. There are other times when I want custom
 functionality that the framework author didn't anticipate, it's in those
 moments I wish I had small modules.  Hopefully by learning rails I'll be able
 to have a more informed opinion on the heated debate.
-
-
-
-

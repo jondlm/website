@@ -1,16 +1,10 @@
----
-layout: post
-title: Git Cheat Sheet
-description: "My personal Git cheat sheet"
-modified: 2014-03-18
-tags: [cheat-sheet,git]
-image:
-  feature: abstract-2.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Git Cheat Sheet"
+description = "My personal Git cheat sheet"
+date        = "2014-03-18"
+tags        = ["cheat-sheet", "git"]
+comments    = true
++++
 
 I haven't been able to write many blog posts lately. I've been very busy and
 have lots to share, but for the time being I am going to release a series of

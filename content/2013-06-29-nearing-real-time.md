@@ -1,16 +1,10 @@
----
-layout: post
-title: Nearing Real-Time
-description: "The demand for high speed web applications is on the rise. Learn about one of the main technologies that is making it possible."
-modified: 2013-06-29
-tags: [websockets,real-time]
-image:
-  feature: abstract-6.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Nearing Real-Time"
+description = "The demand for high speed web applications is on the rise. Learn about one of the main technologies that is making it possible."
+date        = "2013-06-29"
+tags        = ["websockets","real-time"]
+comments    = true
++++
 
 > "It is, unfortunately, one of the chief characteristics of modern business to
 > be always in a hurry."

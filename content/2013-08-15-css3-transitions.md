@@ -1,16 +1,10 @@
----
-layout: post
-title: CSS3 Transitions and Images
-description: "Learn about a mistake I ran into when first using CSS transitions"
-modified: 2013-08-15
-tags: [tips,css,animation]
-image:
-  feature: abstract-6.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "CSS3 Transitions and Images"
+description = "Learn about a mistake I ran into when first using CSS transitions"
+date        = "2013-08-15"
+tags        = ["tips", "css", "animation"]
+comments    = true
++++
 
 <style type="text/css">
   #kittydiv {
@@ -53,13 +47,13 @@ Transitions work mostly like you think they would. Here's my general work flow:
 3. Pick how long you want the transition to take written with an `s` suffix meaning "seconds".
 
 
-{% highlight css %}
+```css
 #kitty{
   transition-property: width, height;
   transition-timing-function: ease;
   transition-duration: 1s;
 }
-{% endhighlight %}
+```
 
 ## The Hiccup
 
@@ -67,7 +61,7 @@ All that seemed well and good, but I found one caveat. If you are animating `wid
 
 ### Wrong
 
-{% highlight css %}
+```css
 img {
   transition-property: width, height;
   transition-timing-function: ease;
@@ -78,7 +72,7 @@ img:hover {
   width: 200px;
   height: 200px;
 }
-{% endhighlight %}
+```
 
 <div id="kittydiv">
   <img id="kitty" src='http://placekitten.com/300/300'>
@@ -88,7 +82,7 @@ In chrome, the effect is startling. The image disappears into a tiny dot before 
 
 ### Right
 
-{% highlight css %}
+```css
 img {
   transition-property: width, height;
   transition-timing-function: ease;
@@ -101,7 +95,7 @@ img:hover {
   width: 200px;
   height: 200px;
 }
-{% endhighlight %}
+```
 
 <div id="kittydiv2">
   <img id="kitty2" src='http://placekitten.com/300/300'>

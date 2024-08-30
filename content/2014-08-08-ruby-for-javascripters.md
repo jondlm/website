@@ -1,16 +1,10 @@
----
-layout: post
-title: Ruby for JavaScripters
-description: "A post for people who know JavaScript and are learning Ruby"
-modified: 2014-08-08
-tags: [ruby,javascript,learning]
-image:
-  feature: abstract-7.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: true
-share: true
----
++++
+title       = "Ruby for JavaScripters"
+description = "A post for people who know JavaScript and are learning Ruby"
+date        = "2014-08-08"
+tags        = ["ruby", "javascript", "learning"]
+comments    = true
++++
 
 This post was created primarily for me, and secondarily for the few people out
 there who are learning ruby and come from a javascript background. Here are
@@ -19,14 +13,14 @@ language. I'm using Ruby 2.0+.
 
 ## Comments
 
-{% highlight javascript %}
+```javascript
 // this is a single line comment
 
 /* this is a
    multi-line comment */
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 # this is a single line comment
 
 # this is a
@@ -36,7 +30,7 @@ language. I'm using Ruby 2.0+.
   another way
   to do multi-line
 =end
-{% endhighlight %}
+```
 
 ## Variables
 
@@ -45,16 +39,16 @@ letter then camel case after that (ie `thisIsMyVariable`). In ruby, people tend
 to use all lowercase letters and underscores for separators (ex
 `this_is_my_variable`).
 
-{% highlight javascript %}
+```javascript
 var myVariable = "hello there";
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 my_variable = "hello there"
-{% endhighlight %}
+```
 
 ## Arrays
-{% highlight javascript %}
+```javascript
 var arr = [1,2,3,4];
 
 arr.push(5);
@@ -63,22 +57,22 @@ arr = arr.map(function(a) {
   return a * 2;
 });
 
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 arr = [1,2,3,4]
 
 arr.push(5)
 
 arr.map! {|i| i * 2} # the `!` saves the result back to the variable
 
-{% endhighlight %}
+```
 
 
 ## Hashes (objects)
 
 
-{% highlight javascript %}
+```javascript
 var obj = {
   one: 1,
   two: 2
@@ -93,10 +87,10 @@ for (var key in obj) {
 
 obj.hasOwnProperty('one'); // true
 
-{% endhighlight %}
+```
 
 
-{% highlight ruby %}
+```ruby
 obj = {
   one: 1,
   two: 2
@@ -107,11 +101,11 @@ obj.each {|key, value|
 }
 
 obj.has_key? # true
-{% endhighlight %}
+```
 
 ## Functions
 
-{% highlight javascript %}
+```javascript
 function multiply(a, b) {
   return a * b;
 }
@@ -124,9 +118,9 @@ console.log(multiply(5,10)) // 50
 
 console.log(addOne())       // 1
 console.log(addOne(5))      // 6
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 def multiply(a, b)
   return a * b
 end
@@ -140,11 +134,11 @@ puts multiply 5,10   # 50
 
 puts add_one         # 1
 puts add_one 5       # 6
-{% endhighlight %}
+```
 
 ## Classes
 
-{% highlight javascript %}
+```javascript
 function Car(year, brand) {
   this.year = year;
   this.brand = brand;
@@ -156,9 +150,9 @@ Car.prototype.dispayInfo = function() {
 
 var civic = new Car(2005, 'honda');
 civic.dispayInfo(); // 2005 honda
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 class Car
   attr_accessor :year, :brand
 
@@ -174,8 +168,7 @@ end
 
 honda = Car.new(2005, 'honda')
 honda.display_info # 2005 honda
-
-{% endhighlight %}
+```
 
 ## Credits
 
