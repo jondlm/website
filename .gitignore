@@ -8,4 +8,5 @@ node_modules
 *.swo
 tmp
 .sass-cache
+public
 
