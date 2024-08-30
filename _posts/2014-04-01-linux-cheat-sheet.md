@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2014-04-01
+modified: 2014-04-03
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
@@ -113,7 +113,7 @@ You shouldn't generally need more than one SSH key, I should be reusing the same
 
 Using `ssh-add` puts your private key into `ssh-agent` that stores your password and private key while your machine is running
 
-Make sure your `ssh-agent` is running with `eval `ssh-agent -s``
+Make sure your `ssh-agent` is running with `ssh-agent bash`
 
 ## Ubuntu unity
 
