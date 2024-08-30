@@ -23,9 +23,9 @@ if [ -d public ]; then
 fi
 
 # Writes new files to `public`. Not sure if the second `hugo` is needed but I think it is cause of the way purgecss works.
-hugo
+hugo --baseURL "https://jondlm.github.io/website/"
 pnpm run shrink
-hugo
+hugo --baseURL "https://jondlm.github.io/website/"
 cp -r public/* "$TEMP_DIR"
 
 # Checkout `gh-pages` if it exists. Might not need this `if` check
