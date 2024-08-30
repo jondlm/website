@@ -18,7 +18,7 @@ branches and how they fit together. I wrote a little command to open the webpage
 from your command line. *Note:* this only works on Mac, though it could easily
 be tweaked to work on linux.
 
-![Network graph]({{ site.url }}/images/gn-newtork.png)
+![Network graph]({{ site.url }}/images/gn-network.png)
 
 Put the following line in your `.bashrc` or `.zshrc`:
 
