@@ -1,5 +1,5 @@
 <ul class="posts">
-  {{ range .Pages }}
+  {{ range .Site.RegularPages }}
     {{ $url := replace .Permalink .Site.BaseURL "" }}
     <li class="posts-item">
       <div class="posts-item-title-bar">
