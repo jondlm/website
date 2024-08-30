@@ -16,6 +16,7 @@ About 6 months ago I began a new endeavor. I decided that HTML5 was cool, and I
 was determined to learn it. At that time, I didn't realize what HTML5 even
 meant. Since then, I've learned a lot; I'd like to share some of that with you.
 
+
 ### First Steps
 
 My professional background in technology related primarily to data
