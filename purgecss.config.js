@@ -1,6 +1,6 @@
 module.exports = {
   content: ["public/**/*.html"],
-  css: ["themes/clean/static/css/style.css"],
+  css: ["public/css/style.css"],
   extractors: [
     {
       extractor: class {
@@ -9,7 +9,7 @@ module.exports = {
           return content.match(/[\w-:/]+(?<!:)/g) || [];
         }
       },
-      extensions: ["html"]
-    }
-  ]
+      extensions: ["html"],
+    },
+  ],
 };
