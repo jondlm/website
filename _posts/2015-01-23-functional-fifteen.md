@@ -17,7 +17,7 @@ share: true
 
 Functional programming is all the rage these days. It's hard to go to a
 conference, the water cooler, or your grandmas house without hearing about it.
-To initiates it's an insurmountable wall containing droves of of intellectual
+To initiates it's an insurmountable wall containing droves of intellectual
 giants and the answers to all your bugs. To learners it's the great mind twist
 that forces them to revisit and rethink many of the premises on which they
 learned the craft. Beyond that stage I can only surmise. Is programming nirvana
