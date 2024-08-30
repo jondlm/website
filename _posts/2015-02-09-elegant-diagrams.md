@@ -31,10 +31,10 @@ about the components and their relationships.
 
 ## Installation
 
-These instructions are for people with Mac's and homebrew. It's probably a
+These instructions are for people with Macs and homebrew. It's probably a
 similar process for Linux. All you need to do is install the *graphviz*
-homebrew package. This will make available a suite of command line tools. The
-one we're interested in is `dot`.
+homebrew package. This will make available a suite of command line tools. We're
+interested in `dot`.
 
 {% highlight bash %}
 brew install graphviz
@@ -245,7 +245,7 @@ digraph my_graph {
 ## Further reading
 
 I may update this post in the future as I learn more about graphiz. Here are a
-couple links I found useful once I knew basics:
+couple links I've found useful:
 
 - http://www.graphviz.org/doc/info/attrs.html
 - http://www.graphviz.org/pdf/dotguide.pdf
