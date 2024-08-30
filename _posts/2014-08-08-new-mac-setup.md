@@ -2,7 +2,7 @@
 layout: post
 title: The Ultimate Mac, Vim, and Tmux setup
 description: "My personal mac setup"
-modified: 2014-05-21
+modified: 2014-08-08
 tags: [mac,vim,tmux,iterm2,zsh,solarized,homebrew]
 image:
   feature: abstract-7.jpg
@@ -12,14 +12,15 @@ comments: true
 share: true
 ---
 
-I grew up using Macs, was eventually forced back on to Windows for a job, and
-now have finally landed back in the Mac realm. After having been around the
-block on just about every platform, I can safely argue that they are objectively
-better for a developer who’s serious about Linux.
+I grew up using Macs, was forced back to Windows for a job, worked on Ubuntu
+for a while, and now have finally landed back in the Mac realm. After having
+been around the block on just about every platform, I can safely argue that
+Mac's are better for a developer who’s serious about Linux but doesn't want to
+sacrifice a quality UI.
 
 One of the hardest things about setting up a new box is figuring out all the
 quirky setup nuances that make your box shine. This post is the chronicle of my
-most recent, and most ultimate setup yet.
+most recent, most ultimate setup yet.
 
 This was all performed on a fresh MacBook Air, but really anything running
 Mavericks works.
@@ -50,7 +51,7 @@ Mavericks works.
 Start by downloading and install iTerm, Alfred, Homebrew, and Solarized
 (imported into iTerm2 from [this file][solar-file]). Once you have that done,
 setup your iTerm2 profile to use your newly imported *Solarized Dark* theme.
-Also make sure your “Report terminal type” is set to `xterm-256color`. Then,
+Also make sure your “Report terminal type” is set to `xterm-256color`. Then
 let’s keep going on the installation by hopping into iTerm2 and running some
 shizz.
 
@@ -83,7 +84,8 @@ Install jVim to your home directory:
 
     git clone https://github.com/jondlm/jvim.git ~/.jvim
     cd ~/.jvim
-    ./install.sh
+    git submodule update --init --recursive
+    ./install.sh bonus
 
 Restart iTerm2.
 
@@ -95,6 +97,18 @@ Fire up Tmux:
 
     tmux
 
+Setup vim:
+
+    vim
+    # ignore errors for now
+    :BundleInstall
+
+## Interlude...
+
+To be honest, I started writing this article several months ago and never
+finished it. I suspect these steps are correct, but your mileage may vary.
+
+Fin.
 
 [solar-file]: https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors
 
