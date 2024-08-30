@@ -22,7 +22,7 @@ be tweaked to work on linux.
 
 Put the following line in your `.bashrc` or `.zshrc`:
 
-    alias gn="git remote -v | sed 's/origin.*:\([^.]*\).*/\1/' | head -n1 | read GH; /usr/bin/open -a \"/Applications/Google Chrome.app\" \"https://github.com/\$GH/network\""
+    alias gn="git remote -v | grep 'git@github' | sed 's/origin.*:\([^.]*\).*/\1/' | head -n1 | read GH; /usr/bin/open -a \"/Applications/Google Chrome.app\" \"https://github.com/\$GH/network\""
 
 Type `gn` from the root directory of your git project and it will open the
 GitHub network page inside of chrome.
