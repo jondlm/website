@@ -17,10 +17,13 @@
 
     <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
 
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico">
+    <link rel="icon" href="data:;base64,=">
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css">
+
+    {{ if not .Params.omit_highlighting }}
+      <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css">
+    {{ end }}
 
     {{ if .Site.Params.enableRSS }}
       <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />

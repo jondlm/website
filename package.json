@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "tailwind build themes/clean/static/css-src/style.css -o themes/clean/static/css/style.css",
-    "shrink": "purgecss --css themes/clean/static/css/style.css --content '**/*.html' --out themes/clean/static/css/"
+    "shrink": "purgecss --config purgecss.config.js --out themes/clean/static/css/"
   },
   "keywords": [],
   "author": "Jon de la Motte",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/jondlm/website#readme",
   "dependencies": {
-    "purgecss": "^1.4.0",
+    "purgecss": "^1.4.2",
     "tailwindcss": "^1.1.2"
   }
 }
