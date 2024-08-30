@@ -104,6 +104,7 @@ Search the root directory for anything with 'something' in it and pipe that to l
 
 - `date —iso8601=seconds -u` displays iso 8601 date time for UTC. Some version of linux don't have this flag, see below
 - `date +%FT%T%z` displays iso 8601 local and works with all versions of `date`
+- `date -d '4 days ago'` relative dates
 
 ## Security
 
