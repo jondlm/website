@@ -57,7 +57,7 @@ highlights. It's hard to understate how much more productive Tmux makes you
 when working in a text environment. I tried using both [GNU Screen](screen) and
 Tmux, I like Tmux much better. Here's me using Tmux to write this post:
 
-![using Tmux]({{ site.url }}/images/tmux.png)
+![using Tmux](/images/tmux.png)
 
 ### Learning Resources
 

@@ -1,0 +1,13 @@
+<footer class="footer">
+  {{ if .Site.Social }}
+    {{ partial "social.html" . }}
+  {{ end }}
+
+  <div class="footer-copyright">
+    {{ with .Site.Params.copyright }}
+      {{ . | markdownify }}
+    {{ else }}
+      © Copyright {{.Now.Format "2006"}} {{ .Site.Params.name }}
+    {{ end }}
+  </div>
+</footer>

@@ -1,0 +1,24 @@
+{{ partial "head.html" . }}
+<body>
+  {{ partial "nav.html" . }}
+
+  <div class="feature">
+    <img
+      class="feature-image"
+      src="{{ .Site.BaseURL }}images/box.png"
+      alt="A computer bursting with magical worlds and ideas."
+    />
+
+    <h1 class="feature-title">{{ .Site.Title }}</h1>
+    <h2 class="feature-subtitle">{{ .Site.Params.description }}</h2>
+  </div>
+
+  <div>
+    {{ partial "posts.html" . }}
+  </div>
+
+  {{ partial "footer.html" . }}
+
+  {{ partial "js.html" . }}
+</body>
+</html>

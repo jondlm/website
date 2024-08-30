@@ -1,9 +1,8 @@
 languageCode = "en-us"
-title        = "Blog"
+title        = "Inside the Box"
 baseURL      = "http://www.jondelamotte.com/"
 theme        = "hugo-privacy-cactus-theme"
 
 [Params]
 
-name   = "Jon de la Motte"
-bio    = "Nfne"
+description = "The musings of Jon de la Motte"
