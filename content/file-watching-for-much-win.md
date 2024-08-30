@@ -2,7 +2,7 @@
 title       = "File Watching for Much Win"
 description = "How to use fswatch for much win"
 date        = "2015-10-09"
-tags        = ["fswatch"] 
+tags        = ["fswatch"]
 comments    = true
 +++
 

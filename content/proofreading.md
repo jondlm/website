@@ -24,7 +24,7 @@ press "shift-alt-right-arrow" (Mac) or "ctrl-shift-right-arrow" (Windows)
 repeatedly, it will highlight a single word at a time. Perhaps it's better to
 illustrate this with a GIF:
 
-<p class="text-center">
+<p class="center">
   <img src="/images/posts/proofreading/proofreading-01.gif" alt="The HAYR method in action">
 </p>
 
