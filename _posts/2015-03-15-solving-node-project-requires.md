@@ -27,7 +27,7 @@ to the base of my project. That way you could simply do:
 
 {% highlight javascript %}
 var __base = require('__base');
-var thingy = require('lib/thingy.js');
+var thingy = require(__base + 'lib/thingy.js');
 {% endhighlight %}
 
 Originally I built the [project-base] npm package that worked. The problem is
