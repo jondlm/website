@@ -2,27 +2,16 @@
 
   {{ partial "nav.html" . }}
 
-  <article class="post">
+  <article>
     <header>
-      <div class="post-title-bar">
-        <h1>{{ .Title }}</h1>
+      <div class="flex justify-between items-baseline">
+        <h1 class="text-2xl">{{ .Title }}</h1>
 
-        <div class="post-date">{{ .Date.Format "2006-01-02" }}</div>
-      </div>
-
-      <div class="post-tags">
-        {{ with .Params.tags }}
-          {{ if ge (len .) 1 }}
-            {{ range . }}
-              <a class="post-tags-item" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
-          {{ end }}
-        {{ end }}
+        <div class="text-gray-500">{{ .Date.Format "2006-01-02" }}</div>
       </div>
     </header>
 
-
-    <section class="post-content">
+    <section class="post">
         {{ .Content }}
     </section>
 

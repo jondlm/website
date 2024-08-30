@@ -1,5 +1,5 @@
 <ul class="posts">
-  {{ range .Site.RegularPages }}
+  {{ range where .Site.RegularPages "Section" "blog" }}
     {{ $url := replace .Permalink .Site.BaseURL "" }}
     <li class="flex flex-col pb-8">
       <div class="flex items-baseline justify-between">

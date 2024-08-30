@@ -3,10 +3,12 @@ title = "Resume - Jon de la Motte"
 type = "page"
 +++
 
-<section class="flex items-center justify-end pb-10">
+<section class="flex items-center justify-end pb-4">
   <div class="mr-auto">
     <h1 class="text-4xl md:text-6xl">Jon de la Motte</h1>
-    <p class="text-sm text-gray-500">Full Stack Developer</p>
+    <p class="text-sm text-gray-500">
+      Full Stack Developer - Portland, OR
+    </p>
   </div>
   <img
     class="flex-grow-0 h-0 w-0 md:h-20 md:w-20 rounded-full rounded-r-none mr-2"
@@ -38,19 +40,17 @@ type = "page"
 
 <div class="text-sm">
   <div
-    class="md:w-4/12 md:float-right p-4 mb-4 md:m-4 md:mr-0 md:mt-0 bg-gray-100 rounded text-sm"
+    class="md:w-4/12 md:float-right p-4 mb-2 md:m-4 md:mr-0 md:mt-0 bg-gray-100 rounded text-sm"
   >
     <h3 class="text-lg mb-2">Open Source Highlights</h3>
 
     <div class="mb-1">
-      <a href="https://github.com/appnexus/lucid">Lucid</a>, a React component
-      library (<a href="https://www.youtube.com/watch?v=iPN5IdUrsoM"
-        >presentation</a
-      >)
+      <a href="https://github.com/appnexus/lucid">Lucid</a> - a React component
+      library
     </div>
 
     <div>
-      <a href="https://github.com/appnexus/ankh">Ankh</a>, a multi-cluster
+      <a href="https://github.com/appnexus/ankh">Ankh</a> - a multi-cluster
       Kubernetes deployment tool
     </div>
 
@@ -96,10 +96,6 @@ type = "page"
       </li>
       <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">SQL</li>
       <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Unix</li>
-    </ul>
-
-    <h3 class="text-lg mb-2 mt-4">Client-side</h3>
-    <ul class="flex flex-wrap text-xs">
       <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">React</li>
       <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
         Webpack
@@ -115,19 +111,12 @@ type = "page"
       <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">
         Data Visualization
       </li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Jest</li>
-      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Mocha</li>
+      <li class="border border-gray-500 rounded-full px-2 mr-2 mb-2">Testing</li>
+    </ul>
+
+    <ul class="flex flex-wrap text-xs">
     </ul>
   </div>
-
-  <p class="mb-6">
-    I'm a remote full stack developer living in Portland, Oregon. I spend a lot
-    of time learning new technologies; I'm always searching for
-    <i>the most effective</i>. It's more a mentality than a destination. My
-    technical background is diverse, ranging from building React component
-    libraries to wrangling copious amounts of Kubernetes YAMLs. I prefer open
-    source when possible; it's wonderful when done well.
-  </p>
 
   <header class="flex items-baseline">
     <h3 class="text-xl mb-2">
@@ -144,41 +133,35 @@ type = "page"
   <p class="mb-2">
     Originally hired on as a front-end engineer to work on the main UI product
     that was written in PHP and jQuery. Helped form a grassroots movement to
-    convert UIs to React. Embarked on a long "selling" process to management but
-    ultimately decreased our bugs and improved developer velocity by adopting
-    React. Wrote two large React component libraries:
+    convert UIs to React. Helped drive React adoption that ultimately decreased
+    bugs and improved developer velocity. Wrote two large React component
+    libraries:
     <a href="https://github.com/appnexus/lucid">Lucid</a> and its extension that
     was proprietary and internal. Gave two (<a
-      href="https://www.youtube.com/watch?v=MCiJVPBDOfI"
+      href="https://www.youtube.com/watch?v=iPN5IdUrsoM"
       >1</a
-    >, <a href="https://www.youtube.com/watch?v=iPN5IdUrsoM">2</a>) public
+    >, <a href="https://www.youtube.com/watch?v=MCiJVPBDOfI">2</a>) public
     presentations about Lucid.
   </p>
 
   <p class="mb-2">
-    Helped migrate many services to Kubernetes. Was involved very early in the
-    evaluation process and was the first engineer to run production services on
-    Kubernetes at the company. Helped lead a large project that migrated our
-    entire UI stack to Kubernetes; the net result was our UI stack deployed to
-    three separate geographies and far more stable deployments and
+    Participated in the evaluation of and was the first engineer to run
+    production services on Kubernetes at the company. Helped lead a large
+    project that migrated the entire UI stack to Kubernetes; the net result was
+    geographically redundant deployment and far more stable deployments and
     infrastructure compared to our existing homegrown solutions. Other
     highlights:
   </p>
 
-  <ul class="list-disc pl-4 mb-6">
-    <li>
-      Rewrote the main navigation bar from jQuery to React, and eventually
-      TypeScript, and converted it to a service that exposed it across
-      microservice UIs.
-    </li>
+  <ul class="list-disc pl-4 mb-2">
     <li>
       Worked on a TypeScript, Hapi, Node.js API that was in the critical path
       for all our microservice UIs.
     </li>
     <li>
-      Was an original contributor to the
-      <a href="https://github.com/appnexus/ankh">Ankh</a> tool written in Go.
-      Ankh is the de-facto internal deployment tool for Kubernetes services.
+      Original contributor to the
+      <a href="https://github.com/appnexus/ankh">Ankh</a> tool written in Go
+      which became the de-facto deployment tool for Kubernetes services.
     </li>
     <li>
       Wrote and maintained a CLI that bootstrapped UI apps when the company
@@ -201,9 +184,8 @@ type = "page"
   <p class="mb-2">
     Built a web application to manage thousands of internet connected Android
     devices in the field around the US. The web app is written in Angular and
-    backed by Node and a Java API. It was build using Node,
-    <a href="https://hapi.dev">Hapi</a>, Angular, and Boostrap. Also queried
-    existing Elasticsearch infrastructure.
+    backed by Node and a Java API. It was build using Node, Hapi, Angular, and
+    Boostrap. Also queried existing Elasticsearch infrastructure.
   </p>
 
   <p class="mb-2">
@@ -214,7 +196,7 @@ type = "page"
     deploy applications.
   </p>
 
-  <p class="mb-6">
+  <p class="mb-2">
     Helped manage and prioritize scrum sprints. Mainly involved triaging tickets
     in Jira and discussing software development priorities with management.
   </p>
@@ -233,15 +215,13 @@ type = "page"
   <p class="mb-2">
     Built a new mobile responsive website for CSG based on designer
     specifications. Used the following technologies: Node, Express and Azure.
-  </p>
-  <p class="mb-2">
     Built the company's first HTML5 dashboard with a Node back-end. Used client
     side JavaScript to create rich interaction and data filtering. It used AJAX,
     JavaScript, and plenty of JSON over HTTP.
   </p>
-  <p class="mb-6">
+  <p class="mb-2">
     Moved web development forward at CSG by educating peers and introducing
-    client-side MVC and CSS frameworks to projects.
+    client-side MVC and CSS frameworks to several projects.
   </p>
 
   <header class="flex items-baseline">
@@ -256,7 +236,7 @@ type = "page"
     </aside>
   </header>
 
-  <p class="mb-6">
+  <p class="mb-2">
     Worked as a consultant on various kinds of analytical projects ranging from
     enterprise data warehousing to real-time dashboards. Worked as the lead
     consultant for several companies in the Portland area on data projects
@@ -264,8 +244,6 @@ type = "page"
     manufacturing, and distribution. Improved internal reporting and visibility
     for CSG through a series of automated reports and ETL processes.
   </p>
-
-  <h2 class="text-2xl mb-4">Education</h2>
 
   <header class="flex items-baseline">
     <h3 class="text-xl mb-2">
