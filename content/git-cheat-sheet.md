@@ -25,6 +25,7 @@ with Git; the best source control on the planet.
 - `git commit -m "the first commit"` commit the changes
 - `git checkout master -- file.html` checkout a file from another branch
 - `git checkout HEAD -- file.html` checkout a file from HEAD
+- `git log -L 100,100:path/to/a/file.txt` history for a single line (e.g. line 100) in a file
 
 ## Merge conflicts
 
