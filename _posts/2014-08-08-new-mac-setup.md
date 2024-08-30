@@ -56,9 +56,9 @@ let’s keep going on the installation by hopping into iTerm2 and running some
 shizz.
 
 Homebrew installs stuff in `/usr/local/bin` so let’s add it to our path by
-modifying `~/.bashrc` and `~/.zshrc`
+modifying `~/.bashrc` and `~/.zshrc` this might not be required
 
-    echo “PATH=/usr/local/bin:/usr/local/sbin:$PATH" | tee ~/.bashrc ~/.zshrc
+    echo PATH=/usr/local/bin:/usr/local/sbin:$PATH | tee -a ~/.bashrc ~/.zshrc
 
 Install zsh, vim, tmux, and something to connect your Mac's clipboard to Vim:
 
@@ -66,7 +66,7 @@ Install zsh, vim, tmux, and something to connect your Mac's clipboard to Vim:
 
 Tell your mac to permit your custom shell:
 
-    echo “/usr/local/bin/zsh” | sudo tee -a /etc/shells
+    echo /usr/local/bin/zsh | sudo tee -a /etc/shells
 
 Change your default shell:
 
