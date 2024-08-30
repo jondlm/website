@@ -2,7 +2,7 @@
 layout: post
 title: Linux Cheat Sheet
 description: "My personal Linux cheat sheet, mostly Ubuntu"
-modified: 2014-09-12
+modified: 2015-03-17
 tags: [cheat-sheet,linux,ubuntu]
 image:
   feature: abstract-8.jpg
@@ -31,7 +31,7 @@ writing **everything** I learned down. Maybe this stuff will help someone else.
 
 - `script terminal_session.txt` starts recording all the output from your terminal to a file
 - `ctrl-d` ends the recording session
-- `less -R terminal_session.txt` displays the session in its "raw" form for coloring, etc.
+- `less -R terminal_session.txt` displays the session in its "raw" form for coloring, etc
 
 ## File system
 
@@ -58,6 +58,11 @@ writing **everything** I learned down. Maybe this stuff will help someone else.
   search through files in the current directory and count the number of lines
   containing "something"
 
+### [`fswatch`]
+
+- `fswatch -l 0.2 -r src/**/*.spec.* | xargs -n1 program` watch all `.spec.` files and run them through `program` every time you save
+- `fswatch -l 0.2 -r src/**/*.js | xargs -n1 -I{} ` watch all `.js` files and run `program` every time you save
+
 ## Archiving and compression
 
 - `tar -zcvf test.tar.gz /home/jon/test` create a compressed archive and store it to a new file called `test.tar.gz`
@@ -79,7 +84,7 @@ Search the root directory for anything with 'something' in it and pipe that to l
 
 ## Networking
 
-- `/etc/hosts` is a file that is like a personal DNS. You can map custom IPs to hostnames in it.
+- `/etc/hosts` is a file that is like a personal DNS. You can map custom IPs to hostnames in it
 - `sudo netstat -tulpn` display all the open ports on your machine
 
 - `ssh -i ~/.ssh/id_rsa jon@10.10.10.10` log into the `10.10.10.10` machine with
@@ -157,4 +162,5 @@ Make sure your `ssh-agent` is running with `ssh-agent bash`
 - `make -j16` number of threads, 2x your number of cores makes sense"
 
 [inode-issue]: http://www.linuxquestions.org/questions/linux-general-1/different-results-in-du-and-df-841145/
+[fswatch]: https://github.com/emcrisostomo/fswatch
 
