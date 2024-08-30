@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Sample Post
-description: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
+title: Jon's post
+description: "Dan is cool when naked"
 modified: 2013-05-31
-tags: [sample post]
+tags: [sample post new-tag something]
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
@@ -11,6 +11,12 @@ image:
 comments: true
 share: true
 ---
+
+# My Post Is Cool
+
+Just put some text here
+
+![image](http://placekitten/300)
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
