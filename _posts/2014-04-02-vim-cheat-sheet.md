@@ -5,7 +5,7 @@ description: "My personal Vim cheat sheet"
 modified: 2014-04-02
 tags: [cheat-sheet,linux,vim]
 image:
-  feature: abstract-9.jpg
+  feature: abstract-3.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true
