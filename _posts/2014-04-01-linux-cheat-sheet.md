@@ -62,6 +62,7 @@ writing **everything** I learned down. Maybe this stuff will help someone else.
 
 - `fswatch -l 0.2 -r src/**/*.spec.* | xargs -n1 program` watch all `.spec.` files and run them through `program` every time you save with a 200ms delay
 - `fswatch -l 0.2 -r src/**/*.js | xargs -n1 -I{} ` watch all `.js` files and run `program` every time you save with a 200ms delay
+- `fswatch -l 0.2 src | egrep --line-buffered '\.(js|jsx)$' | xargs -n1 -I{} flow` a non shell expansion version
 
 ## Archiving and compression
 
