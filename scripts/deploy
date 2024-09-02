@@ -45,7 +45,7 @@ cp -r "$TEMP_DIR"/* .
 # Add, commit, push.
 git add -A
 git commit -m "gh-pages deploy"
-git push
+git push -f
 
 # Return to the master branch.
 git checkout master
