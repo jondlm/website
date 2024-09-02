@@ -1,0 +1,13 @@
+_site
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+codekit-config.json
+node_modules
+*.swp
+*.swo
+tmp
+.sass-cache
+
+# generated files
+public
