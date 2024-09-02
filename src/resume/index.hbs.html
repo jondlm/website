@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resume - Jon de la Motte</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <style>
+      [data-viz] {
+        background: linear-gradient(
+          90deg,
+          #b2f5ea 0%,
+          #b2f5ea 50%,
+          #f7fafc 50%
+        );
+        background-position-x: 100%;
+        background-size: 200%;
+
+        transition:
+          background-position-x ease-in-out 600ms,
+          min-width ease-in-out 600ms;
+      }
+
+      .print-only {
+        display: none;
+      }
+
+      @media print {
+        .print-only {
+          display: initial;
+        }
+
+        [data-hook="show-viz"] {
+          display: none;
+        }
+      }
+    </style>
+
+    <section class="flex items-center justify-between pb-4">
+      <div>
+        <h1 class="text-4xl md:text-6xl">Jon de la Motte</h1>
+        <p class="text-sm text-gray-500">
+          Full-stack software engineer
+          <br />
+          remote only from Portland, OR
+        </p>
+      </div>
+      <div class="hidden print:flex">
+        <a href="https://jondlm.github.io/website/resume/"
+          ><img
+            class="m-auto"
+            src="/images/netscape.png"
+            alt="netscape 4 life"
+          />
+          <p class="text-sm">view on the web</p>
+        </a>
+      </div>
+      <div class="flex">
+        <div class="text-right">
+          <p class="text-sm">jondlm@gmail.com</p>
+          <p class="text-sm">503 261 3636</p>
+          <p class="text-sm">
+            <a href="https://jondelamotte.com">jondelamotte.com</a>
+          </p>
+          <p class="text-sm justify-end flex items-center">
+            <a href="https://github.com/jondlm">jondlm</a>
+            <svg
+              class="w-4 h-4 inline fill-current text-gray-700 ml-1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewbox="0 0 578.305 578.305"
+            >
+              <path
+                d="M533.32 160.379c.532-26.518-5.294-53.33-10.024-79.731-1.628-9.088-4.927-17.87-8.177-26.487-2.448-6.487-9.676-10.618-16.334-9.198-4.309.918-8.183 1.812-11.94 3.048-39.327 12.938-75.741 31.86-110.723 53.844-4.7 2.95-11.536 4.015-17.21 3.599-13.574-.992-27.001-4.37-40.569-5.013-33.58-1.591-67.093-.569-100.368 5.251-4.626.808-10.716.012-14.559-2.472-38.146-24.683-77.834-45.809-122.479-57.67-6.702-1.781-13.599-.838-15.294 1.824-1.035 1.628-1.971 3.317-2.485 5.128-4.823 16.946-10.539 33.807-13.342 51.114-3.341 20.655-6.554 41.935-4.969 62.565.998 12.968-2.583 20.937-9.669 30.037C11.407 226.757.703 261.861.048 300.35c-.563 32.919 3.794 65 13.819 96.47 15.355 48.219 45.006 84.406 89.652 107.95 36.708 19.357 76.708 26.818 117.639 28.256 36.892 1.292 73.856.196 110.79.404 37.021.208 73.532-3.091 108.948-14.633 35.447-11.549 66.121-30.184 89.922-59.486 34.376-42.326 45.079-92.186 47.276-144.965 1.684-40.361-6.542-78.329-30.178-111.347-9.584-13.396-14.957-24.902-14.596-42.62zm-71.273 309.262c-15.876 13.728-35.288 20.227-55.16 24.976-38.99 9.315-78.69 11.635-118.519 9.896-39.37 1.707-78.287-.747-116.592-9.762-28.256-6.646-54.052-17.821-72.032-42.075-28.611-38.599-35.924-112.057 11.353-152.148 12.056-10.221 25.502-16.708 41.39-17.717 17.534-1.12 35.074-3.305 52.595-3.097 44.199.526 88.378 2.724 132.571 3.054 20.184.146 40.509-4.56 60.545-3.348 18.207 1.102 37.351 4.455 53.875 11.781 27.546 12.215 42.374 36.983 46.854 65.992 6.67 43.133-2.131 82.393-36.88 112.448z"
+              />
+              <ellipse cx="390.026" cy="385.552" rx="42.124" ry="56.298" />
+              <ellipse cx="189.028" cy="385.552" rx="42.13" ry="56.298" />
+            </svg>
+          </p>
+        </div>
+        <img
+          class="flex-grow-0 h-0 w-0 md:h-20 md:w-16 rounded-full rounded-l-none ml-2 object-cover"
+          src="https://1.gravatar.com/avatar/126c1ea4fdb20bbb85c3ff735b7b0964?s=200"
+          alt="A picture of Jon de la Motte"
+        />
+      </div>
+    </section>
+
+    <div class="text-sm">
+      <div
+        class="md:w-4/12 md:float-right p-4 mb-2 md:m-4 md:mr-0 md:mt-0 bg-gray-100 rounded text-sm"
+      >
+        <h3 class="text-lg">Open Source Highlights</h3>
+        <div class="text-xs text-gray-600 italic mb-2 print:hidden">
+          Hover for project descriptions
+        </div>
+
+        <div class="mb-1">
+          <a
+            title="JavaScript bundler akin to Webpack"
+            href="https://github.com/parcel-bundler/parcel"
+            >Parcel</a
+          >
+          - contributor
+        </div>
+
+        <div class="mb-1">
+          <a
+            title="JavaScript package manager"
+            href="https://github.com/pnpm/pnpm"
+            >Pnpm</a
+          >
+          - contributor
+        </div>
+
+        <div class="mb-1">
+          <a
+            title="React component library"
+            href="https://github.com/appnexus/lucid"
+            >Lucid</a
+          >
+          - author
+        </div>
+
+        <div>
+          <a
+            title="Multi-cluster Kubernetes deployment tool"
+            href="https://github.com/appnexus/ankh"
+            >Ankh</a
+          >
+          - author <sup>(archived)</sup>
+        </div>
+
+        <div class="flex items-center mb-2 mt-4">
+          <h3 class="text-lg">Languages</h3>
+          <button
+            class="text-xs ml-auto bg-teal-400 hover:bg-teal-700 text-white px-2 rounded"
+            title="This visualization shows my relative level of comfort for each given item. The more filled in the bar, the more comfortable I am with the item in particular."
+            data-hook="show-viz"
+          >
+            toggle viz
+          </button>
+        </div>
+        <ul class="flex flex-wrap text-xs">
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="100"
+          >
+            JavaScript
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="100"
+          >
+            TypeScript
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="70"
+          >
+            Go
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="70"
+          >
+            Rust
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="95"
+          >
+            Bash
+          </li>
+        </ul>
+
+        <h3 class="text-lg mb-2 mt-4">General</h3>
+        <ul class="flex flex-wrap text-xs">
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="98"
+          >
+            JS bundlers
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="80"
+          >
+            Web design
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="80"
+          >
+            Kubernetes
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="85"
+          >
+            Docker
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="100"
+          >
+            Node.js
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="60"
+          >
+            WASM
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="80"
+          >
+            SQL
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="95"
+          >
+            Unix
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="95"
+          >
+            React
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="90"
+          >
+            CSS
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="99"
+          >
+            Asking
+            <span title="large language models" class="underline">LLMs</span>
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="2"
+          >
+            AI
+          </li>
+          <li
+            class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
+            data-viz="90"
+          >
+            Obscure JS stuff
+          </li>
+        </ul>
+
+        <ul class="flex flex-wrap text-xs"></ul>
+      </div>
+
+      <header class="flex items-baseline">
+        <h3 class="text-xl mb-2">
+          <svg
+            viewBox="0 0 60 25"
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            class="inline-block mr-1"
+            style="margin-bottom: 2px"
+          >
+            <title>Stripe logo</title>
+            <path
+              fill="#0A2540"
+              d="M59.64 14.28h-8.06c.19 1.93 1.6 2.55 3.2 2.55 1.64 0 2.96-.37 4.05-.95v3.32a8.33 8.33 0 0 1-4.56 1.1c-4.01 0-6.83-2.5-6.83-7.48 0-4.19 2.39-7.52 6.3-7.52 3.92 0 5.96 3.28 5.96 7.5 0 .4-.04 1.26-.06 1.48zm-5.92-5.62c-1.03 0-2.17.73-2.17 2.58h4.25c0-1.85-1.07-2.58-2.08-2.58zM40.95 20.3c-1.44 0-2.32-.6-2.9-1.04l-.02 4.63-4.12.87V5.57h3.76l.08 1.02a4.7 4.7 0 0 1 3.23-1.29c2.9 0 5.62 2.6 5.62 7.4 0 5.23-2.7 7.6-5.65 7.6zM40 8.95c-.95 0-1.54.34-1.97.81l.02 6.12c.4.44.98.78 1.95.78 1.52 0 2.54-1.65 2.54-3.87 0-2.15-1.04-3.84-2.54-3.84zM28.24 5.57h4.13v14.44h-4.13V5.57zm0-4.7L32.37 0v3.36l-4.13.88V.88zm-4.32 9.35v9.79H19.8V5.57h3.7l.12 1.22c1-1.77 3.07-1.41 3.62-1.22v3.79c-.52-.17-2.29-.43-3.32.86zm-8.55 4.72c0 2.43 2.6 1.68 3.12 1.46v3.36c-.55.3-1.54.54-2.89.54a4.15 4.15 0 0 1-4.27-4.24l.01-13.17 4.02-.86v3.54h3.14V9.1h-3.13v5.85zm-4.91.7c0 2.97-2.31 4.66-5.73 4.66a11.2 11.2 0 0 1-4.46-.93v-3.93c1.38.75 3.1 1.31 4.46 1.31.92 0 1.53-.24 1.53-1C6.26 13.77 0 14.51 0 9.95 0 7.04 2.28 5.3 5.62 5.3c1.36 0 2.72.2 4.09.75v3.88a9.23 9.23 0 0 0-4.1-1.06c-.86 0-1.44.25-1.44.9 0 1.85 6.29.97 6.29 5.88z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+          Software Engineer L3
+          <div class="text-xs text-gray-600 italic">Stripe</div>
+        </h3>
+        <aside title="Oct 2020 - Aug 2024" class="ml-auto text-gray-600 pt-1">
+          3 years 10 months
+        </aside>
+      </header>
+
+      <p class="mb-2">
+        I was a founding engineer on the JavaScript Infrastructure team at
+        Stripe. Over the course of my four year tenure, I led and contributed to
+        many projects that established JavaScript as a first-class supported
+        language. Here are some highlights:
+      </p>
+
+      <ul class="list-disc pl-4 mb-2">
+        <li>
+          Created a JavaScript CLI tool used daily by ~600 engineers. It managed
+          JS projects integrated with pnpm, Bazel, and our remote execution
+          infrastructure. It enabled a true monorepo setup that previously was
+          not possible at Stripe.
+        </li>
+        <li>
+          Created and maintained a set of centralized JS dependencies used by
+          monorepo projects. Folks could use the shared tooling without worrying
+          about managing their own test runner, linter, code formatter, build
+          tooling, and typechecking. Customer teams got upgrades for free.
+        </li>
+        <li>
+          Migrated our largest JavaScript codebases (over 4 million lines of
+          code) to a new development optimized bundler that sped up initial
+          development times by 20x.
+        </li>
+        <li>
+          Improved our remote execution system (featured in this
+          <a href="https://youtu.be/JjZ0A1YkKsU?si=sPVDbxRWaeA5RX3-&t=1348"
+            >YouTube presentation</a
+          >) that decreased Bazel memory (20GiB -> 10GiB), sped up JS execution
+          by 10% (in common cases), and improved sandbox setup up to 5x for JS
+          projects.
+        </li>
+      </ul>
+
+      <header class="flex items-baseline">
+        <h3 class="text-xl mb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="70"
+            style="margin-bottom: 5px"
+            viewBox="0 0 579 127"
+            class="inline-block mr-1"
+          >
+            <defs>
+              <path id="a" d="M.02.5h96.685V94H.02z" />
+              <path id="c" d="M.79.37h96.833V127H.79z" />
+              <path id="e" d="M0 .837h46.112v39.622H0z" />
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <path
+                fill="#211F1F"
+                d="M176.48 120.516 156.33 94.51l-20.32 26.038a11.17 11.17 0 0 1-8.935 4.452H109l35.67-45.5L110.544 34H128.8c3.512 0 6.818 1.645 8.924 4.438l19.12 26.42 19.12-26.42A11.17 11.17 0 0 1 184.886 34h17.571l-34.295 45.514L204 125h-18.56a11.17 11.17 0 0 1-8.96-4.484"
+              />
+              <g transform="translate(198 32)">
+                <mask id="b" fill="#fff"><use xlink:href="#a" /></mask>
+                <path
+                  fill="#211F1F"
+                  d="M68.007 67.848q7.687-7.864 7.686-20.684.001-12.819-7.686-20.682c-5.125-5.24-11.615-7.864-19.473-7.864q-11.79.002-19.39 7.864-7.6 7.863-7.6 20.682 0 12.82 7.6 20.684 7.6 7.862 19.39 7.863 11.786 0 19.473-7.863M96.705 1.525v91.278H87.48c-6.132 0-11.102-4.974-11.102-11.109v-.685q-5.299 6.5-13.07 9.743-7.77 3.246-17.166 3.248-13.321.001-23.827-5.813-10.508-5.805-16.4-16.409Q.02 61.183.02 47.164q0-14.015 5.895-24.53c3.928-7.005 9.393-12.45 16.399-16.324Q32.82.501 46.14.5q8.882 0 16.314 3.075 7.428 3.08 12.898 9.06c0-6.136 4.97-11.11 11.102-11.11z"
+                  mask="url(#b)"
+                />
+              </g>
+              <path
+                fill="#211F1F"
+                d="M390.563 43.159C397.517 49.935 401 59.979 401 73.298V126h-10.267c-6.143 0-11.122-5.01-11.122-11.194v-38.75q0-12.057-5.646-18.17c-3.766-4.074-9.126-6.116-16.084-6.116q-11.808.002-18.65 7.15c-4.566 4.764-6.844 11.623-6.844 20.58v35.306c0 6.184-4.98 11.194-11.123 11.194H311V34.032h9.239c6.141 0 11.12 5.011 11.12 11.194v.689c3.537-4.248 7.983-7.463 13.347-9.644q8.039-3.272 18.138-3.271 17.279 0 27.719 10.159"
+              />
+              <g transform="translate(411)">
+                <mask id="d" fill="#fff"><use xlink:href="#c" /></mask>
+                <path
+                  fill="#211F1F"
+                  d="M63.296 105.154q6.148-3.512 9.734-10.025 3.587-6.507 3.587-15.078 0-8.564-3.587-15.077c-2.39-4.341-5.636-7.68-9.734-10.025q-6.15-3.51-13.834-3.511-7.684 0-13.833 3.51-6.149 3.516-9.734 10.026-3.59 6.513-3.589 15.077 0 8.572 3.59 15.078 3.584 6.512 9.733 10.025t13.833 3.512q7.684.001 13.834-3.512M97.623.37V125.8H88.23c-6.13 0-11.1-4.985-11.1-11.137v-.686q-5.298 6.515-13.066 9.768C58.882 125.91 53.16 127 46.9 127c-8.769 0-16.65-1.941-23.653-5.825q-10.501-5.822-16.479-16.536C2.78 97.5.79 89.304.79 80.051s1.989-17.418 5.977-24.503c3.984-7.078 9.48-12.563 16.48-16.447 7.002-3.882 14.883-5.826 23.652-5.826 6.035 0 11.554 1.028 16.567 3.084q7.514 3.085 12.81 9.252V.371h21.347z"
+                  mask="url(#d)"
+                />
+              </g>
+              <path
+                fill="#211F1F"
+                d="M579 33v20.493q-2.745-.517-4.977-.517-12.522 0-19.55 7.32-7.034 7.323-7.034 21.098v33.413c0 6.183-4.992 11.193-11.148 11.193H526V34.034h20.41v13.43Q555.671 33.001 579 33"
+              />
+              <g transform="translate(0 37)">
+                <mask id="f" fill="#fff"><use xlink:href="#e" /></mask>
+                <path
+                  fill="#E10500"
+                  d="M23.308.837a11.6 11.6 0 0 0-1.954 2.518L0 40.459h46.112z"
+                  mask="url(#f)"
+                />
+              </g>
+              <path
+                fill="#F73232"
+                d="M74 34.437A11.8 11.8 0 0 0 70.822 34H31.178c-1.09 0-2.157.15-3.178.437L51 74z"
+              />
+              <path
+                fill="#FC5047"
+                d="m0 83 21.302 37.458c.54.947 1.198 1.799 1.95 2.542L46 83z"
+              />
+              <path
+                fill="#FF7061"
+                d="M80.698 120.458 102 83H56l22.75 40a11.7 11.7 0 0 0 1.948-2.542"
+              />
+              <path
+                fill="#FC8D7E"
+                d="M28 125.563c1.021.287 2.089.437 3.178.437h39.644c1.09 0 2.157-.15 3.178-.437L51 86z"
+              />
+              <path
+                fill="#FC5047"
+                d="M102 77 80.698 39.542A11.8 11.8 0 0 0 78.748 37L56 77z"
+              />
+            </g>
+          </svg>
+          Senior Software Engineer II
+          <div class="text-xs text-gray-600 italic">
+            Xandr, AppNexus (acquired by AT&T, renamed Xandr)
+          </div>
+        </h3>
+        <aside title="Oct 2014 - Oct 2020" class="ml-auto text-gray-600">
+          6 years
+        </aside>
+      </header>
+
+      <p class="mb-2">
+        Originally hired on as a front-end engineer to work on the main UI
+        product that was written in PHP and jQuery. Helped form a grassroots
+        movement to convert UIs to React. Helped drive React adoption that
+        ultimately decreased bugs and improved developer velocity. Authored two
+        large React component libraries:
+        <a href="https://github.com/appnexus/lucid">Lucid</a> and its extension
+        that was proprietary and internal. Gave two (<a
+          href="https://www.youtube.com/watch?v=iPN5IdUrsoM"
+          >1</a
+        >, <a href="https://www.youtube.com/watch?v=MCiJVPBDOfI">2</a>) public
+        presentations about Lucid.
+      </p>
+
+      <p class="mb-2">
+        Helped evaluate and was the first engineer to run production services on
+        Kubernetes at the company. Helped lead a large project that migrated the
+        entire UI stack to Kubernetes; the net result was a geographically
+        redundant system that was more reliable than our previous homegrown
+        solutions. Other highlights:
+      </p>
+
+      <ul class="list-disc pl-4 mb-2">
+        <li>
+          Worked on a TypeScript, Hapi, Node.js API that was in the critical
+          path for all our microservice UIs.
+        </li>
+        <li>
+          Authored and contributed to the
+          <a href="https://github.com/appnexus/ankh">Ankh</a> tool written in Go
+          which became the de-facto deployment tool for Kubernetes services
+          within the company.
+        </li>
+        <li>
+          Wrote and maintained a CLI that bootstrapped UI apps when the company
+          moved to microservice UIs.
+        </li>
+      </ul>
+
+      <header class="flex items-baseline">
+        <h3 class="text-xl mb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 250 237"
+            width="20"
+            class="inline-block mr-1"
+            style="margin-bottom: 4px"
+            fill="none"
+          >
+            <rect width="250" height="237" fill="#399AD1" rx="29" />
+            <path
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="18"
+              d="m74 37 54 81 53.5-81"
+            />
+            <path
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-width="18"
+              d="M69 191.5h110.5c21 0 19-35 1-35H76c-19 0-22-35 2-35h110"
+            />
+          </svg>
+          Software Engineering Team Lead
+          <div class="text-xs text-gray-600 italic">VendScreen</div>
+        </h3>
+        <aside title="Feb 2014 - Oct 2014" class="ml-auto text-gray-600">
+          8 months
+        </aside>
+      </header>
+
+      <p class="mb-2">
+        Built a web application to manage thousands of internet connected
+        Android devices in the field around the US. The web app was written in
+        Angular and backed by Node, a Java API, and Elasticsearch. It was built
+        using Node, Hapi, Angular, and Bootstrap CSS.
+      </p>
+
+      <p class="mb-2">
+        Rebuilt the company's EC2 infrastructure by implementing Ansible to
+        build and mange all servers on CentOS. This enabled the company to have
+        isolated, reproducible, and automated environments. Also introduced and
+        championed the use of HipChat and hubot to deploy applications.
+      </p>
+
+      <p class="mb-2">
+        Helped manage and prioritize scrum sprints. Mainly involved triaging
+        tickets in Jira and discussing software development priorities with
+        management.
+      </p>
+
+      <header class="flex items-baseline">
+        <h3 class="text-xl mb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 756 777"
+            width="23"
+            style="margin-bottom: 2px"
+            fill="none"
+            class="inline-block mr-1"
+          >
+            <path
+              fill="#414142"
+              stroke="#A7A9AC"
+              stroke-width="12"
+              d="M748.5 87C418.5-60.2 117 27.667 6.5 89c19 137.5 59 402.5 73 487 71.233 79 131.5 141.5 301 194.5C579 715.5 653.5 612 680 562c8.667-48.5 32.9-213 68.5-475Z"
+            />
+            <path
+              fill="#55BCEB"
+              d="M718.5 107C520-2 223 4 39 107l105 445c53.145 119.366 115.723 146.839 240.5 180 140.747-44.55 195.526-82.419 237-180 24-168 48.5-224.5 97-445"
+            />
+            <path
+              fill="#fff"
+              stroke="#77787B"
+              stroke-width="12"
+              d="M647.5 558c-208.346-24.151-325.154-24.363-533.5 0L87.5 125.5c217.654-63.85 345.268-66.04 584.5 0z"
+            />
+            <path
+              stroke="#333133"
+              stroke-linejoin="round"
+              stroke-width="47"
+              d="m252.301 389.501 1 83.588-82.894 4.044-5.065-312.312 85.893-10.131 2.066 83.654M418.505 231.52l.626-84.674-83.182 3.753 1.251 148.226 77.553 4.378 2.501 162.611h-82.556l-1.625-82.168M551.604 346.358l38.893 2.501-4.879 128.962-83.306-8.88 5.004-315.84 87.559 13.134-2.501 77.793"
+            />
+            <path
+              fill="#fff"
+              fill-rule="evenodd"
+              d="m283.561 582.659-.266 63.57 13.299.532v-16.757l20.215.532c23.141-6.384 26.333-41.228.798-48.941zm13.831 13.299-.266 20.215 18.353.266c7.448-4.788 8.512-16.225.532-20.215zM346.866 582.124l-.266 64.901h14.097l-.532-15.959 17.555.532c9.215 2.82 11.361 6.203 11.171 14.629l14.098.532c-.484-10.989-2.412-16.014-9.31-22.609 11.171-16.491 3.724-36.44-13.831-41.76zm13.565 14.364-.266 20.214 18.353.266c7.447-4.787 8.511-16.225.532-20.214zM445.704 647.984c18.216 0 32.983-14.648 32.983-32.716s-14.767-32.717-32.983-32.717-32.982 14.648-32.982 32.717 14.767 32.716 32.982 32.716m-.532-14.895c10.283 0 18.62-8.336 18.62-18.619s-8.337-18.619-18.62-18.619-18.619 8.336-18.619 18.619 8.336 18.619 18.619 18.619"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Web Developer
+          <div class="text-xs text-gray-600 italic">CSG Pro</div>
+        </h3>
+        <aside title="Aug 2013 – Feb 2014" class="ml-auto text-gray-600">
+          6 months
+        </aside>
+      </header>
+      <p class="mb-2">
+        Built a new responsive website for CSG based on designer specifications.
+        Used the following technologies: Node, Express and Azure. Built the
+        company's first HTML5 dashboard with a Node back-end. Used client side
+        JavaScript to create rich interaction and data filtering using AJAX,
+        JavaScript, and JSON over HTTP.
+      </p>
+      <p class="mb-2">
+        Moved web development forward at CSG by educating peers and introducing
+        client-side MVC and CSS frameworks to several projects.
+      </p>
+
+      <header class="flex items-baseline">
+        <h3 class="text-xl mb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 756 777"
+            width="23"
+            style="margin-bottom: 2px"
+            fill="none"
+            class="inline-block mr-1"
+          >
+            <path
+              fill="#414142"
+              stroke="#A7A9AC"
+              stroke-width="12"
+              d="M748.5 87C418.5-60.2 117 27.667 6.5 89c19 137.5 59 402.5 73 487 71.233 79 131.5 141.5 301 194.5C579 715.5 653.5 612 680 562c8.667-48.5 32.9-213 68.5-475Z"
+            />
+            <path
+              fill="#55BCEB"
+              d="M718.5 107C520-2 223 4 39 107l105 445c53.145 119.366 115.723 146.839 240.5 180 140.747-44.55 195.526-82.419 237-180 24-168 48.5-224.5 97-445"
+            />
+            <path
+              fill="#fff"
+              stroke="#77787B"
+              stroke-width="12"
+              d="M647.5 558c-208.346-24.151-325.154-24.363-533.5 0L87.5 125.5c217.654-63.85 345.268-66.04 584.5 0z"
+            />
+            <path
+              stroke="#333133"
+              stroke-linejoin="round"
+              stroke-width="47"
+              d="m252.301 389.501 1 83.588-82.894 4.044-5.065-312.312 85.893-10.131 2.066 83.654M418.505 231.52l.626-84.674-83.182 3.753 1.251 148.226 77.553 4.378 2.501 162.611h-82.556l-1.625-82.168M551.604 346.358l38.893 2.501-4.879 128.962-83.306-8.88 5.004-315.84 87.559 13.134-2.501 77.793"
+            />
+            <path
+              fill="#fff"
+              fill-rule="evenodd"
+              d="m283.561 582.659-.266 63.57 13.299.532v-16.757l20.215.532c23.141-6.384 26.333-41.228.798-48.941zm13.831 13.299-.266 20.215 18.353.266c7.448-4.788 8.512-16.225.532-20.215zM346.866 582.124l-.266 64.901h14.097l-.532-15.959 17.555.532c9.215 2.82 11.361 6.203 11.171 14.629l14.098.532c-.484-10.989-2.412-16.014-9.31-22.609 11.171-16.491 3.724-36.44-13.831-41.76zm13.565 14.364-.266 20.214 18.353.266c7.447-4.787 8.511-16.225.532-20.214zM445.704 647.984c18.216 0 32.983-14.648 32.983-32.716s-14.767-32.717-32.983-32.717-32.982 14.648-32.982 32.717 14.767 32.716 32.982 32.716m-.532-14.895c10.283 0 18.62-8.336 18.62-18.619s-8.337-18.619-18.62-18.619-18.619 8.336-18.619 18.619 8.336 18.619 18.619 18.619"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Senior Analytics Consultant
+          <div class="text-xs text-gray-600 italic">CSG Pro</div>
+        </h3>
+        <aside title="May 2011 – Aug 2013" class="ml-auto text-gray-600">
+          2 years 3 months
+        </aside>
+      </header>
+
+      <p class="mb-2">
+        Worked as a consultant on various kinds of analytical projects ranging
+        from enterprise data warehousing to real-time dashboards. Built OLAP
+        cubes and data visualization solutions. Worked as the lead consultant
+        for several companies in the Portland area on data projects relating to
+        supply chain management, logistics, political canvassing, manufacturing,
+        and distribution. Improved internal reporting and visibility for CSG
+        through a series of automated reports and ETL processes.
+      </p>
+
+      <header class="flex items-baseline">
+        <h3 class="text-xl mb-2">
+          BS, Business Information Systems
+          <div class="text-xs text-gray-600 italic">
+            Oregon State University, Corvallis, OR
+          </div>
+        </h3>
+        <aside class="ml-auto text-gray-600">2006 - 2010</aside>
+      </header>
+    </div>
+
+    <script>
+      const showViz = document.querySelector('[data-hook="show-viz"]');
+      const vizes = document.querySelectorAll("[data-viz]");
+      let vizIsShown = false;
+
+      // Precalculate the width of each viz item for use with animations later on
+      vizes.forEach((viz) => {
+        const originalWidth = viz.getBoundingClientRect().width;
+        viz.dataset.originalWidth = originalWidth;
+        viz.style.setProperty("min-width", `${originalWidth}px`);
+        viz.setAttribute("title", `${viz.dataset.viz}% relative comfort level`);
+      });
+
+      showViz.addEventListener("click", (e) => {
+        vizIsShown = !vizIsShown;
+        vizes.forEach((viz) => {
+          viz.style.setProperty(
+            "min-width",
+            vizIsShown ? "6rem" : `${viz.dataset.originalWidth}px`,
+          );
+          viz.style.setProperty(
+            "background-position-x",
+            vizIsShown ? `${100 - parseInt(viz.dataset.viz, 10)}%` : "100%",
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,8 +1,0 @@
-{{ if not .Params.omit_highlighting }}
-  <script src="{{ $.Site.BaseURL }}js/highlight.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-{{ end }}
-
-{{ range .Site.Params.customJS }}
-  <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
-{{ end }}

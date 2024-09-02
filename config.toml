@@ -1,9 +1,0 @@
-languageCode = "en-us"
-title        = "~"
-baseURL      = "/"
-theme        = "clean"
-
-[Params]
-
-description = "The musings of Jon de la Motte"
-name        = "Jon de la Motte"

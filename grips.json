@@ -1,0 +1,8 @@
+{
+  "source": "src",
+  "target": "public",
+  "extensions_to_copy": ["png"],
+  "vars": {
+    "base_url": "https://jondlm.github.io/website"
+  }
+}
