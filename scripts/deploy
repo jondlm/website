@@ -24,7 +24,7 @@ fi
 
 # Writes new files to `public`. Not sure if the second `hugo` is needed but I think it is cause of the way purgecss works.
 npm run build
-/Users/jdlm/grips/target/debug/grips
+grips
 
 cp -r public/* "$TEMP_DIR"
 
