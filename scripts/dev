@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+watchexec -e html,json 'npm run build && grips'
