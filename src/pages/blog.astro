@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const blogPosts = await getCollection("blog");
+---
+
+<Layout title="Blog" small={true}>
+  <h1 class="text-4xl md:text-6xl mb-6">Blog</h1>
+  <ul>
+    {
+      blogPosts.map((post) => (
+        <li>
+          {post.data.date.toISOString().slice(0, 10)}:
+          <a href={`/blog/${post.slug}`}>{post.data.title}</a>{" "}
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

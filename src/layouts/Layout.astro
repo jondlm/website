@@ -1,0 +1,103 @@
+---
+import { Image } from "astro:assets";
+import home from "../images/home.svg";
+
+interface Props {
+  title: string;
+  small?: boolean;
+}
+
+const { title, small } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Website for Ranger: a tech company that builds software for humans."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg?v=2" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class={`${small ? "pb-2 px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96" : "pb-2 px-4"} container mx-auto`}
+  >
+    <div id="sentinal" class="h-4"></div>
+    <nav
+      id="navbar"
+      class="print:hidden flex sticky top-0 transition-all mb-4 px-2 pr-5 py-2 bg-slate-900 rounded-lg border border-slate-900"
+    >
+      <div class="flex-auto flex items-center">
+        <a href="/">
+          <Image width="25" alt="home icon" loading="eager" src={home} />
+        </a>
+      </div>
+      <div class="flex flex-auto items-center justify-end space-x-4">
+        <a class="text-slate-100" href="/values">values</a>
+        <a class="text-slate-100" href="/blog">blog</a>
+        <a class="text-slate-100" href="/resume">resume</a>
+      </div>
+    </nav>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  /* -------------------------------------------------------------------------- */
+  /* Globals                                                                    */
+  /* -------------------------------------------------------------------------- */
+
+  a {
+    @apply text-blue-500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a,
+  a:visited,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
+
+  code {
+    @apply rounded bg-gray-200 px-1 text-sm;
+  }
+
+  pre > code {
+    @apply p-4;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const sentinal = document.getElementById("sentinal");
+    if (
+      !(navbar instanceof HTMLElement) ||
+      !(sentinal instanceof HTMLElement)
+    ) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          navbar.classList.remove("rounded-lg");
+          navbar.classList.add("rounded-none");
+        } else {
+          navbar.classList.remove("rounded-none");
+          navbar.classList.add("rounded-lg");
+        }
+      },
+      { threshold: 0 },
+    );
+
+    observer.observe(sentinal);
+  });
+</script>

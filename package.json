@@ -1,18 +1,21 @@
 {
-  "name": "website",
-  "private": true,
-  "version": "5.0.3",
-  "description": "My blog",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jondlm/website.git"
-  },
+  "name": "website-astro",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "tailwindcss -i src/style.css -o public/style.css -m"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "author": "Jon de la Motte",
-  "license": "ISC",
-  "devDependencies": {
-    "tailwindcss": "^3.4.10"
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.3",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

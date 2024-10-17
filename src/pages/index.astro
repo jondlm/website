@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import signature from "../images/signature.svg";
+---
+
+<Layout title="test" small={true}>
+  <h1 class="text-4xl md:text-6xl mb-6 mt-10">Hi. I'm Jon 👋</h1>
+  <div>
+    <p class="mb-8">
+      Welcome to my corner of the web. I hope you enjoy this hand-crafted <a
+        href="https://benhoyt.com/writings/the-small-web-is-beautiful/"
+        >small website</a
+      >. I like small things.
+    </p>
+    <Image width="54" alt="jon's signature" src={signature} />
+  </div>
+</Layout>
