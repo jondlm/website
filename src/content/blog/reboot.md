@@ -7,7 +7,7 @@ I was at Stripe for four years. I loved my team, enjoyed the work, and had a clo
 
 I'm in the middle of a cataclysmic shift in my life. Technology and work have always provided a sense of stability; a sense of identity. My relationship with them is changing dramatically. I used to tell people "I'm a software engineer" with thinly veiled pride. I see things differently now. I've needed to start _really_ asking the question: what do I care about?
 
-Take a peek at my [values](/values) page to learn more about what I've discovered so far.
+Take a peek at my [values](/website/values) page to learn more about what I've discovered so far.
 
 In the last couple years I've started taking writing more seriously. I've started writing stories from my childhood. I've begun sharing them with a group of people. Though it's hard for me to believe, I actually enjoy writing now.
 

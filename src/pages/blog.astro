@@ -12,7 +12,7 @@ const blogPosts = await getCollection("blog");
       blogPosts.map((post) => (
         <li>
           {post.data.date.toISOString().slice(0, 10)}:
-          <a href={`/blog/${post.slug}`}>{post.data.title}</a>{" "}
+          <a href={`/website/blog/${post.slug}`}>{post.data.title}</a>{" "}
         </li>
       ))
     }
