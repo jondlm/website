@@ -41,10 +41,18 @@ git checkout master -- .gitignore
 # Copy over the new assets.
 cp -r "$TEMP_DIR"/* .
 
+# This is needed to tell GH Pages to not mess with underscore prefixed dirs
+# like `_astro`.
+#
+# https://github.blog/news-insights/the-library/bypassing-jekyll-on-github-pages/
+touch .nojekyll
+
 # Add, commit, push.
 git add -A
 git commit -m "gh-pages deploy"
 git push -f
+
+rm .nojekyll
 
 # Return to the master branch.
 git checkout master
