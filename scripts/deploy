@@ -17,16 +17,15 @@ cleanup() {
 }
 trap cleanup EXIT
 
-# Clear previous `public`.
-if [ -d public ]; then
-  rm -rf public
+# Clear previous `dist`.
+if [ -d dist ]; then
+  rm -rf dist
 fi
 
-# Writes new files to `public`. Not sure if the second `hugo` is needed but I think it is cause of the way purgecss works.
+# Writes new files to `dist`.
 npm run build
-grips
 
-cp -r public/* "$TEMP_DIR"
+cp -r dist/* "$TEMP_DIR"
 
 # Checkout `gh-pages` if it exists. Might not need this `if` check
 if git show-ref --quiet refs/heads/gh-pages; then
