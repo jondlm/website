@@ -27,6 +27,12 @@ npm run build
 
 cp -r dist/* "$TEMP_DIR"
 
+# This is needed to tell GH Pages to not mess with underscore prefixed dirs
+# like `_astro`.
+#
+# https://github.blog/news-insights/the-library/bypassing-jekyll-on-github-pages/
+touch "$TEMP_DIR/.nojekyll"
+
 # Checkout `gh-pages` if it exists. Might not need this `if` check
 if git show-ref --quiet refs/heads/gh-pages; then
   git checkout gh-pages
