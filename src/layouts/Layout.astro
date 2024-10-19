@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import home from "../images/home.svg";
+import home from "../images/home_handwritten.svg";
 
 interface Props {
   title: string;
@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { title, small } = Astro.props;
+const containerClass = `${small ? "px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96" : "px-4"} container mx-auto`;
 ---
 
 <!doctype html>
@@ -23,17 +24,20 @@ const { title, small } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body
-    class={`${small ? "pb-2 px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96" : "pb-2 px-4"} container mx-auto`}
-  >
-    <div id="sentinal" class="h-4"></div>
+  <body class={`${containerClass} pb-2`}>
+    <div id="sentinal" class="h-6"></div>
+    <div
+      id="nav-stripe"
+      class="print:hidden bg-slate-900 top-0 right-full left-0 w-full fixed opacity-0"
+    >
+    </div>
     <nav
       id="navbar"
-      class="print:hidden flex sticky top-0 transition-all mb-4 px-2 pr-5 py-2 bg-slate-900 rounded-lg border border-slate-900"
+      class="print:hidden sticky top-0 flex mb-4 px-2 pr-5 py-2 bg-slate-900 rounded-lg border border-slate-900"
     >
       <div class="flex-auto flex items-center">
         <a href="/">
-          <Image width="25" alt="home icon" loading="eager" src={home} />
+          <Image width="65" alt="home" loading="eager" src={home} />
         </a>
       </div>
       <div class="flex flex-auto items-center justify-end space-x-4">
@@ -77,22 +81,34 @@ const { title, small } = Astro.props;
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
+    const navStripe = document.getElementById("nav-stripe");
     const sentinal = document.getElementById("sentinal");
+
+    // Satisfy TS, do nothing if we're missing any elements
     if (
       !(navbar instanceof HTMLElement) ||
+      !(navStripe instanceof HTMLElement) ||
       !(sentinal instanceof HTMLElement)
     ) {
       return;
     }
 
+    const initClasses = ["opacity-0"];
+    const stickyClasses = ["opacity-100", "transition-all"];
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) {
-          navbar.classList.remove("rounded-lg");
-          navbar.classList.add("rounded-none");
+        // Dynamically set the height of the stripe to match the nav
+        navStripe.style.height = `${navbar.getBoundingClientRect().height}px`;
+
+        if (entry.isIntersecting) {
+          // Person is scrolled to the top of the page
+          initClasses.forEach((c) => navStripe.classList.add(c));
+          stickyClasses.forEach((c) => navStripe.classList.remove(c));
         } else {
-          navbar.classList.remove("rounded-none");
-          navbar.classList.add("rounded-lg");
+          // They are further down the page and we're in "sticky" mode
+          initClasses.forEach((c) => navStripe.classList.remove(c));
+          stickyClasses.forEach((c) => navStripe.classList.add(c));
         }
       },
       { threshold: 0 },
