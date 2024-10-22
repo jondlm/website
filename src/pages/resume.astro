@@ -33,7 +33,7 @@ const spacing = "mb-7";
 <Layout title="Resume - Jon de la Motte">
   <section class="flex items-center justify-between pb-4">
     <div>
-      <h1 class="text-4xl md:text-6xl">Jon de la Motte</h1>
+      <h1 class="text-4xl md:text-6xl print:text-5xl">Jon de la Motte</h1>
       <p class="text-sm text-gray-500">
         Full-stack software engineer
         <br />
@@ -82,10 +82,13 @@ const spacing = "mb-7";
             <p class="text-sm">view on the web</p>
             <img
               class="object-contain w-12 ml-1"
-              src="/images/netscape.png"
+              src="/website/images/netscape.png"
               alt="netscape 4 life"
             />
           </a>
+        </div>
+        <div class="print:hidden text-sm">
+          <a id="print-button" href="#">print 🖨️</a>
         </div>
       </div>
       <img
@@ -98,7 +101,7 @@ const spacing = "mb-7";
 
   <div class="text-sm">
     <div
-      class="md:w-4/12 md:float-right px-4 py-2 mb-6 md:m-4 md:mr-0 md:mt-0 bg-gray-100 rounded text-sm"
+      class="md:w-4/12 md:float-right px-4 py-2 mb-6 md:m-4 md:mr-0 md:mt-0 bg-gray-100 rounded text-sm print:border print:border-slate-200"
     >
       <h3 class="text-lg">Open Source Highlights</h3>
       <div class="text-xs text-gray-600 italic mb-2 print:hidden">
@@ -620,6 +623,8 @@ const spacing = "mb-7";
 <script>
   const showViz = document.querySelector('[data-hook="show-viz"]');
   const vizes = document.querySelectorAll("[data-viz]");
+  const printButton = document.querySelector("#print-button");
+
   let vizIsShown = false;
 
   // Precalculate the width of each viz item for use with animations later on
@@ -649,6 +654,13 @@ const spacing = "mb-7";
           );
         }
       });
+    });
+  }
+
+  if (printButton instanceof HTMLElement) {
+    printButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.print();
     });
   }
 </script>
