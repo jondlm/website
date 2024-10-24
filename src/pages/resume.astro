@@ -87,14 +87,14 @@ const spacing = "mb-7";
             />
           </a>
         </div>
-        <div class="print:hidden text-sm">
-          <a id="print-button" href="#">print 🖨️</a>
+        <div class="print:hidden text-sm text-blue-500">
+          <button id="print-button" href="#">print 🖨️</button>
         </div>
       </div>
       <img
         class="flex-grow-0 h-0 w-0 md:h-20 md:w-16 rounded-full rounded-l-none ml-2 object-cover"
         src="https://1.gravatar.com/avatar/126c1ea4fdb20bbb85c3ff735b7b0964?s=200"
-        alt="A picture of Jon de la Motte"
+        alt="Headshot of Jon de la Motte"
       />
     </div>
   </section>
@@ -142,127 +142,144 @@ const spacing = "mb-7";
 
       <div class="flex items-center mb-2 mt-4">
         <h3 class="text-lg">Languages</h3>
-        <button
-          class="text-xs ml-auto bg-teal-400 hover:bg-teal-700 text-white px-2 rounded"
-          title="This visualization shows my relative level of comfort for each given item. The more filled in the bar, the more comfortable I am with the item in particular."
-          data-hook="show-viz"
-        >
-          toggle viz
-        </button>
       </div>
       <ul class="flex flex-wrap text-xs">
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="100"
-        >
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
           JavaScript
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="100"
-        >
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
           TypeScript
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="70"
-        >
-          Go
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Go</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Rust</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Python
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="70"
-        >
-          Rust
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Php</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Java</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Bash</li>
+      </ul>
+
+      <h3 class="text-lg mb-2 mt-4 flex items-center">
+        <div class="w-4 h-4 mr-2 bg-lime-500 rounded inline-block">
+        </div>Front-End
+      </h3>
+      <ul class="flex flex-wrap text-xs">
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          React
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="95"
-        >
-          Bash
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">CSS</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Tailwind CSS
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Web performance
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Webpack
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Vite</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Parcel
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Astro
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Web design
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Data viz
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">SVG</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">WASM</li>
+      </ul>
+
+      <h3 class="text-lg mb-2 mt-4 flex items-center">
+        <div class="w-4 h-4 mr-2 bg-indigo-500 rounded inline-block">
+        </div>Back-End
+      </h3>
+      <ul class="flex flex-wrap text-xs">
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Node.js
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          PostgreSQL
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          MySQL
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Columnar databases
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Ruby on Rails
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          GraphQL
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          RESTful services
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Security
         </li>
       </ul>
 
-      <h3 class="text-lg mb-2 mt-4">General</h3>
+      <h3 class="text-lg mb-2 mt-4 flex items-center">
+        <div class="w-4 h-4 mr-2 bg-amber-500 rounded inline-block"></div>DevOps
+        & Infrastructure
+      </h3>
       <ul class="flex flex-wrap text-xs">
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="98"
-        >
-          JS bundlers
-        </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="80"
-        >
-          Web design
-        </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="80"
-        >
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
           Kubernetes
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="85"
-        >
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
           Docker
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="100"
-        >
-          Node.js
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Linux admin
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="60"
-        >
-          WASM
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Prometheus
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="80"
-        >
-          SQL
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Grafana
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="95"
-        >
-          Unix
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Ansible
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="95"
-        >
-          React
+      </ul>
+
+      <h3 class="text-lg mb-2 mt-4 flex items-center">
+        <div class="w-4 h-4 mr-2 bg-teal-500 rounded inline-block"></div>Build &
+        Tooling
+      </h3>
+      <ul class="flex flex-wrap text-xs">
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          JS bundlers
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="90"
-        >
-          CSS
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          JS compilers
         </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="99"
-        >
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Bazel
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Package management
+        </li>
+      </ul>
+
+      <h3 class="text-lg mb-2 mt-4">Other</h3>
+      <ul class="flex flex-wrap text-xs">
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Git</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Vim</li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+          Terminal
+        </li>
+        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
           Asking
           <span title="large language models" class="underline">LLMs</span>
-        </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="2"
-        >
-          AI
-        </li>
-        <li
-          class="border border-gray-500 rounded-full px-2 mr-2 mb-2"
-          data-viz="90"
-        >
-          Obscure JS stuff
         </li>
       </ul>
 
@@ -284,7 +301,13 @@ const spacing = "mb-7";
             d="M59.64 14.28h-8.06c.19 1.93 1.6 2.55 3.2 2.55 1.64 0 2.96-.37 4.05-.95v3.32a8.33 8.33 0 0 1-4.56 1.1c-4.01 0-6.83-2.5-6.83-7.48 0-4.19 2.39-7.52 6.3-7.52 3.92 0 5.96 3.28 5.96 7.5 0 .4-.04 1.26-.06 1.48zm-5.92-5.62c-1.03 0-2.17.73-2.17 2.58h4.25c0-1.85-1.07-2.58-2.08-2.58zM40.95 20.3c-1.44 0-2.32-.6-2.9-1.04l-.02 4.63-4.12.87V5.57h3.76l.08 1.02a4.7 4.7 0 0 1 3.23-1.29c2.9 0 5.62 2.6 5.62 7.4 0 5.23-2.7 7.6-5.65 7.6zM40 8.95c-.95 0-1.54.34-1.97.81l.02 6.12c.4.44.98.78 1.95.78 1.52 0 2.54-1.65 2.54-3.87 0-2.15-1.04-3.84-2.54-3.84zM28.24 5.57h4.13v14.44h-4.13V5.57zm0-4.7L32.37 0v3.36l-4.13.88V.88zm-4.32 9.35v9.79H19.8V5.57h3.7l.12 1.22c1-1.77 3.07-1.41 3.62-1.22v3.79c-.52-.17-2.29-.43-3.32.86zm-8.55 4.72c0 2.43 2.6 1.68 3.12 1.46v3.36c-.55.3-1.54.54-2.89.54a4.15 4.15 0 0 1-4.27-4.24l.01-13.17 4.02-.86v3.54h3.14V9.1h-3.13v5.85zm-4.91.7c0 2.97-2.31 4.66-5.73 4.66a11.2 11.2 0 0 1-4.46-.93v-3.93c1.38.75 3.1 1.31 4.46 1.31.92 0 1.53-.24 1.53-1C6.26 13.77 0 14.51 0 9.95 0 7.04 2.28 5.3 5.62 5.3c1.36 0 2.72.2 4.09.75v3.88a9.23 9.23 0 0 0-4.1-1.06c-.86 0-1.44.25-1.44.9 0 1.85 6.29.97 6.29 5.88z"
             fill-rule="evenodd"></path>
         </svg>
-        Software Engineer L3
+        Software Engineer L3<span
+          class="bg-amber-500 text-white rounded-full text-sm px-2 ml-2 align-text-bottom"
+          >infra</span
+        ><span
+          class="bg-teal-500 text-white rounded-full text-sm px-2 ml-1 align-text-bottom"
+          >build</span
+        >
         <div class="text-xs text-gray-600 italic">Stripe</div>
       </h3>
       <aside title="3 years 10 months" class="ml-auto text-gray-600 pt-1">
@@ -294,9 +317,11 @@ const spacing = "mb-7";
 
     <p class="mb-2">
       I was a founding engineer on the JavaScript Infrastructure team at Stripe.
-      Over the course of my four year tenure, I led and contributed to many
-      projects that established JavaScript as a first-class supported language.
-      Here are some highlights:
+      I did whatever it took to make JS devs at Stripe write higher quality
+      code, be more productive, and worry less about maintaining their own
+      tooling. Over the course of my four year tenure, I led and contributed to
+      many projects that established JavaScript as a first-class supported
+      language. Here are some highlights:
     </p>
 
     <ul class={`list-disc pl-4 ${spacing}`}>
@@ -323,7 +348,8 @@ const spacing = "mb-7";
           >YouTube presentation</a
         >) that decreased Bazel memory (20GiB -> 10GiB), sped up JS execution by
         10% (in common cases), and improved sandbox setup up to 5x for JS
-        projects.
+        projects. This involved writing low-level Go code that performed
+        syscalls within Firecracker VMs.
       </li>
     </ul>
 
@@ -397,7 +423,16 @@ const spacing = "mb-7";
               d="M102 77 80.698 39.542A11.8 11.8 0 0 0 78.748 37L56 77z"></path>
           </g>
         </svg>
-        Senior Software Engineer II
+        Senior Software Engineer II<span
+          class="bg-lime-500 text-white rounded-full text-sm px-2 ml-2 align-text-bottom"
+          >FE</span
+        ><span
+          class="bg-indigo-500 text-white rounded-full text-sm px-2 ml-1 align-text-bottom"
+          >BE</span
+        ><span
+          class="bg-amber-500 text-white rounded-full text-sm px-2 ml-1 align-text-bottom"
+          >infra</span
+        >
         <div class="text-xs text-gray-600 italic">
           Xandr, AppNexus (acquired by AT&T, renamed Xandr)
         </div>
@@ -467,7 +502,16 @@ const spacing = "mb-7";
             stroke-width="18"
             d="M69 191.5h110.5c21 0 19-35 1-35H76c-19 0-22-35 2-35h110"></path>
         </svg>
-        Software Engineering Team Lead
+        Software Engineering Team Lead<span
+          class="bg-lime-500 text-white rounded-full text-sm px-2 ml-2 align-text-bottom"
+          >FE</span
+        ><span
+          class="bg-amber-500 text-white rounded-full text-sm px-2 ml-1 align-text-bottom"
+          >infra</span
+        ><span
+          class="bg-teal-500 text-white rounded-full text-sm px-2 ml-1 align-text-bottom"
+          >build</span
+        >
         <div class="text-xs text-gray-600 italic">VendScreen</div>
       </h3>
       <aside title="8 months" class="ml-auto text-gray-600">
@@ -533,7 +577,10 @@ const spacing = "mb-7";
             d="m283.561 582.659-.266 63.57 13.299.532v-16.757l20.215.532c23.141-6.384 26.333-41.228.798-48.941zm13.831 13.299-.266 20.215 18.353.266c7.448-4.788 8.512-16.225.532-20.215zM346.866 582.124l-.266 64.901h14.097l-.532-15.959 17.555.532c9.215 2.82 11.361 6.203 11.171 14.629l14.098.532c-.484-10.989-2.412-16.014-9.31-22.609 11.171-16.491 3.724-36.44-13.831-41.76zm13.565 14.364-.266 20.214 18.353.266c7.447-4.787 8.511-16.225.532-20.214zM445.704 647.984c18.216 0 32.983-14.648 32.983-32.716s-14.767-32.717-32.983-32.717-32.982 14.648-32.982 32.717 14.767 32.716 32.982 32.716m-.532-14.895c10.283 0 18.62-8.336 18.62-18.619s-8.337-18.619-18.62-18.619-18.619 8.336-18.619 18.619 8.336 18.619 18.619 18.619"
             clip-rule="evenodd"></path>
         </svg>
-        Web Developer
+        Web Developer<span
+          class="bg-lime-500 text-white rounded-full text-sm px-2 ml-2 align-text-bottom"
+          >FE</span
+        >
         <div class="text-xs text-gray-600 italic">CSG Pro</div>
       </h3>
       <aside title="6 months" class="ml-auto text-gray-600">
@@ -621,41 +668,7 @@ const spacing = "mb-7";
 </Layout>
 
 <script>
-  const showViz = document.querySelector('[data-hook="show-viz"]');
-  const vizes = document.querySelectorAll("[data-viz]");
   const printButton = document.querySelector("#print-button");
-
-  let vizIsShown = false;
-
-  // Precalculate the width of each viz item for use with animations later on
-  vizes.forEach((viz) => {
-    if (viz instanceof HTMLElement) {
-      const originalWidth = viz.getBoundingClientRect().width;
-      viz.dataset.originalWidth = originalWidth.toString();
-      viz.style.setProperty("min-width", `${originalWidth}px`);
-      viz.setAttribute("title", `${viz.dataset.viz}% relative comfort level`);
-    }
-  });
-
-  if (showViz != null) {
-    showViz.addEventListener("click", () => {
-      vizIsShown = !vizIsShown;
-      vizes.forEach((viz) => {
-        if (viz instanceof HTMLElement) {
-          viz.style.setProperty(
-            "min-width",
-            vizIsShown ? "6rem" : `${viz.dataset.originalWidth}px`,
-          );
-          viz.style.setProperty(
-            "background-position-x",
-            vizIsShown
-              ? `${100 - parseInt(viz.dataset.viz || "0", 10)}%`
-              : "100%",
-          );
-        }
-      });
-    });
-  }
 
   if (printButton instanceof HTMLElement) {
     printButton.addEventListener("click", (event) => {
