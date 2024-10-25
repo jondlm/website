@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 const spacing = "mb-7";
+const pillClass = "border border-gray-400 rounded-full px-1.5 mr-1 mb-1";
 ---
 
 <style>
@@ -101,7 +102,7 @@ const spacing = "mb-7";
 
   <div class="text-sm">
     <div
-      class="md:w-4/12 md:float-right px-4 py-2 mb-6 md:m-4 md:mr-0 md:mt-0 bg-gray-100 rounded text-sm print:border print:border-slate-200"
+      class="md:w-4/12 md:float-right px-4 py-2 pb-3 mb-6 md:m-4 md:mr-0 md:mt-0 bg-gray-100 rounded text-sm print:border print:border-slate-200"
     >
       <h3 class="text-lg">Open Source Highlights</h3>
       <div class="text-xs text-gray-600 italic mb-2 print:hidden">
@@ -140,150 +141,88 @@ const spacing = "mb-7";
         - author
       </div>
 
-      <div class="flex items-center mb-2 mt-4">
+      <div class="flex items-center mb-2 mt-3">
         <h3 class="text-lg">Languages</h3>
       </div>
       <ul class="flex flex-wrap text-xs">
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          JavaScript
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          TypeScript
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Go</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Rust</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Python
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Php</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Java</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Bash</li>
+        <li class={pillClass}>JavaScript</li>
+        <li class={pillClass}>TypeScript</li>
+        <li class={pillClass}>Go</li>
+        <li class={pillClass}>Rust</li>
+        <li class={pillClass}>Python</li>
+        <li class={pillClass}>Php</li>
+        <li class={pillClass}>Java</li>
+        <li class={pillClass}>Bash</li>
       </ul>
 
-      <h3 class="text-lg mb-2 mt-4 flex items-center">
+      <h3 class="text-lg mb-2 mt-3 flex items-center">
         <div class="w-4 h-4 mr-2 bg-lime-500 rounded inline-block">
         </div>Front-End
       </h3>
       <ul class="flex flex-wrap text-xs">
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          React
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">CSS</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Tailwind CSS
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Web performance
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Webpack
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Vite</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Parcel
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Astro
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Web design
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Data viz
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">SVG</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">WASM</li>
+        <li class={pillClass}>React</li>
+        <li class={pillClass}>CSS</li>
+        <li class={pillClass}>Tailwind CSS</li>
+        <li class={pillClass}>Web performance</li>
+        <li class={pillClass}>Webpack</li>
+        <li class={pillClass}>Vite</li>
+        <li class={pillClass}>Parcel</li>
+        <li class={pillClass}>Astro</li>
+        <li class={pillClass}>Web design</li>
+        <li class={pillClass}>Data viz</li>
+        <li class={pillClass}>SVG</li>
+        <li class={pillClass}>WASM</li>
       </ul>
 
-      <h3 class="text-lg mb-2 mt-4 flex items-center">
+      <h3 class="text-lg mb-2 mt-3 flex items-center">
         <div class="w-4 h-4 mr-2 bg-indigo-500 rounded inline-block">
         </div>Back-End
       </h3>
       <ul class="flex flex-wrap text-xs">
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Node.js
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          PostgreSQL
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          MySQL
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Columnar databases
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Ruby on Rails
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          GraphQL
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          RESTful services
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Security
-        </li>
+        <li class={pillClass}>Node.js</li>
+        <li class={pillClass}>PostgreSQL</li>
+        <li class={pillClass}>MySQL</li>
+        <li class={pillClass}>Columnar databases</li>
+        <li class={pillClass}>Ruby on Rails</li>
+        <li class={pillClass}>GraphQL</li>
+        <li class={pillClass}>RESTful services</li>
+        <li class={pillClass}>Security</li>
       </ul>
 
-      <h3 class="text-lg mb-2 mt-4 flex items-center">
+      <h3 class="text-lg mb-2 mt-3 flex items-center">
         <div class="w-4 h-4 mr-2 bg-amber-500 rounded inline-block"></div>DevOps
         & Infrastructure
       </h3>
       <ul class="flex flex-wrap text-xs">
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Kubernetes
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Docker
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Linux admin
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Prometheus
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Grafana
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Ansible
-        </li>
+        <li class={pillClass}>Kubernetes</li>
+        <li class={pillClass}>Docker</li>
+        <li class={pillClass}>Linux admin</li>
+        <li class={pillClass}>Prometheus</li>
+        <li class={pillClass}>Grafana</li>
+        <li class={pillClass}>Ansible</li>
       </ul>
 
-      <h3 class="text-lg mb-2 mt-4 flex items-center">
+      <h3 class="text-lg mb-2 mt-3 flex items-center">
         <div class="w-4 h-4 mr-2 bg-teal-500 rounded inline-block"></div>Build &
         Tooling
       </h3>
       <ul class="flex flex-wrap text-xs">
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          JS bundlers
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          JS compilers
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Bazel
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Package management
-        </li>
+        <li class={pillClass}>JS bundlers</li>
+        <li class={pillClass}>JS compilers</li>
+        <li class={pillClass}>Bazel</li>
+        <li class={pillClass}>Package management</li>
       </ul>
 
-      <h3 class="text-lg mb-2 mt-4">Other</h3>
+      <h3 class="text-lg mb-2 mt-3">Other</h3>
       <ul class="flex flex-wrap text-xs">
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Git</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">Vim</li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
-          Terminal
-        </li>
-        <li class="border border-gray-400 rounded-full px-2 mr-2 mb-2">
+        <li class={pillClass}>Git</li>
+        <li class={pillClass}>Vim</li>
+        <li class={pillClass}>Terminal</li>
+        <li class={pillClass}>
           Asking
           <span title="large language models" class="underline">LLMs</span>
         </li>
       </ul>
-
-      <ul class="flex flex-wrap text-xs"></ul>
     </div>
 
     <header class="flex items-baseline">
@@ -637,7 +576,10 @@ const spacing = "mb-7";
             d="m283.561 582.659-.266 63.57 13.299.532v-16.757l20.215.532c23.141-6.384 26.333-41.228.798-48.941zm13.831 13.299-.266 20.215 18.353.266c7.448-4.788 8.512-16.225.532-20.215zM346.866 582.124l-.266 64.901h14.097l-.532-15.959 17.555.532c9.215 2.82 11.361 6.203 11.171 14.629l14.098.532c-.484-10.989-2.412-16.014-9.31-22.609 11.171-16.491 3.724-36.44-13.831-41.76zm13.565 14.364-.266 20.214 18.353.266c7.447-4.787 8.511-16.225.532-20.214zM445.704 647.984c18.216 0 32.983-14.648 32.983-32.716s-14.767-32.717-32.983-32.717-32.982 14.648-32.982 32.717 14.767 32.716 32.982 32.716m-.532-14.895c10.283 0 18.62-8.336 18.62-18.619s-8.337-18.619-18.62-18.619-18.619 8.336-18.619 18.619 8.336 18.619 18.619 18.619"
             clip-rule="evenodd"></path>
         </svg>
-        Senior Analytics Consultant
+        Senior Analytics Consultant<span
+          class="bg-indigo-500 text-white rounded-full text-sm px-2 ml-2 align-text-bottom"
+          >BE</span
+        >
         <div class="text-xs text-gray-600 italic">CSG Pro</div>
       </h3>
       <aside title="2 years 3 months" class="ml-auto text-gray-600">
