@@ -146,10 +146,9 @@ const containerClass = `${small ? "px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96" : 
     <rect width="100" height="58" x="200" y="62" stroke="#000" stroke-width="32" fill="#fff" rx="21"/>
     <path stroke="#000" stroke-linecap="round" stroke-width="40" d="M176 183h151m-153 74h151m-151 74h151"/>
 </svg>`;
-  const codeBlockBgColor = "#24292e";
   const langStyle = `border: 1px solid #aab0b7; border-bottom: none; transition: all 0.4s;`;
 
-  async function setClipboard(text) {
+  async function setClipboard(text: string) {
     const type = "text/plain";
     const blob = new Blob([text], { type });
     const data = [new ClipboardItem({ [type]: blob })];
@@ -157,34 +156,41 @@ const containerClass = `${small ? "px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96" : 
   }
 
   Array.from(codeBlocks).forEach((block) => {
+    if (!(block instanceof HTMLElement)) return;
+
     const codeTab = document.createElement("div");
     const lang = document.createElement("button");
 
     lang.innerHTML = `${block.dataset.language} ${clipboardSvg}`;
     lang.classList.add("p-0.5", "px-1", "rounded-t");
-    lang.style = langStyle;
+    lang.setAttribute("style", langStyle);
 
     codeTab.classList.add("text-xs", "-mt-4");
-    codeTab.style = "display: flex; justify-content: flex-end;";
+    codeTab.setAttribute("style", "display: flex; justify-content: flex-end;");
 
     codeTab.appendChild(lang);
 
-    block.parentElement.insertBefore(codeTab, block);
+    if (block.parentElement != null) {
+      block.parentElement.insertBefore(codeTab, block);
+    }
 
     // Success/fail button flash
     lang.addEventListener("click", async () => {
       let success = true;
 
       try {
-        await setClipboard(block.textContent.trim());
+        await setClipboard((block.textContent ?? "").trim());
       } catch (e) {
         console.error(e);
         success = false;
       }
 
-      lang.style = `${langStyle} background-color: ${success ? "#dcfce7" : "#fee2e2"} ;`;
+      lang.setAttribute(
+        "style",
+        `${langStyle} background-color: ${success ? "#dcfce7" : "#fee2e2"} ;`,
+      );
       setTimeout(() => {
-        lang.style = langStyle;
+        lang.setAttribute("style", langStyle);
       }, 800);
     });
   });
