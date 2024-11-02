@@ -43,6 +43,7 @@ const containerClass = `${small ? "px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96" : 
       <div class="flex flex-auto items-center justify-end space-x-4">
         <a class="text-slate-100" href="/website/values">values</a>
         <a class="text-slate-100" href="/website/blog">blog</a>
+        <a class="text-slate-100" href="/website/til">TIL</a>
         <a class="text-slate-100" href="/website/resume">resume</a>
       </div>
     </nav>
@@ -69,11 +70,122 @@ const containerClass = `${small ? "px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96" : 
     text-decoration: none;
   }
 
-  code {
-    @apply rounded bg-gray-200 px-1 text-sm;
+  /* ----------------------------------- */
+  /* Markdown posts                      */
+  /* ----------------------------------- */
+
+  .md h1 {
+    @apply text-4xl md:text-6xl;
   }
 
-  pre > code {
-    @apply p-4;
+  .md h2 {
+    @apply text-3xl md:text-5xl my-6;
+  }
+
+  .md h3 {
+    @apply text-2xl md:text-4xl my-5;
+  }
+
+  .md h4 {
+    @apply text-xl md:text-3xl my-4;
+  }
+
+  .md p {
+    @apply my-4;
+  }
+
+  .md blockquote {
+    @apply italic mb-4 pl-2 border-l-2 border-l-indigo-500;
+  }
+
+  .md ul {
+    @apply list-disc pl-4;
+  }
+
+  .md ol {
+    @apply list-decimal pl-7;
+  }
+
+  .md .astro-code {
+    @apply rounded p-2 text-sm;
+    border-top-right-radius: unset;
+  }
+
+  /* Tables */
+  .md table {
+    @apply w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400;
+  }
+  .md thead {
+    @apply rounded rounded-t text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+  }
+  .md th,
+  .md td {
+    @apply px-6 py-2;
+  }
+  .md tbody > tr {
+    @apply bg-white border-b dark:bg-gray-800 dark:border-gray-700;
+  }
+
+  /* Code */
+  .md p > code,
+  .md td > code,
+  .md li > code {
+    @apply bg-gray-200 px-1 rounded;
   }
 </style>
+
+<script>
+  // -----------------------------------------------
+  // Language badge & copy to clipboard
+  // -----------------------------------------------
+  const codeBlocks = document.querySelectorAll("[data-language]");
+  const clipboardSvg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500" width="16" height="15" style="display:inline-block;vertical-align:bottom">
+    <rect width="266" height="318" x="117" y="91" stroke="#000" stroke-width="40" fill="none" rx="40"/>
+    <rect width="132" height="76.56" x="184" y="53" stroke="#fff" stroke-width="40" rx="21"/>
+    <rect width="100" height="58" x="200" y="62" stroke="#000" stroke-width="32" fill="#fff" rx="21"/>
+    <path stroke="#000" stroke-linecap="round" stroke-width="40" d="M176 183h151m-153 74h151m-151 74h151"/>
+</svg>`;
+  const codeBlockBgColor = "#24292e";
+  const langStyle = `border: 1px solid #aab0b7; border-bottom: none; transition: all 0.4s;`;
+
+  async function setClipboard(text) {
+    const type = "text/plain";
+    const blob = new Blob([text], { type });
+    const data = [new ClipboardItem({ [type]: blob })];
+    await navigator.clipboard.write(data);
+  }
+
+  Array.from(codeBlocks).forEach((block) => {
+    const codeTab = document.createElement("div");
+    const lang = document.createElement("button");
+
+    lang.innerHTML = `${block.dataset.language} ${clipboardSvg}`;
+    lang.classList.add("p-0.5", "px-1", "rounded-t");
+    lang.style = langStyle;
+
+    codeTab.classList.add("text-xs", "-mt-4");
+    codeTab.style = "display: flex; justify-content: flex-end;";
+
+    codeTab.appendChild(lang);
+
+    block.parentElement.insertBefore(codeTab, block);
+
+    // Success/fail button flash
+    lang.addEventListener("click", async () => {
+      let success = true;
+
+      try {
+        await setClipboard(block.textContent.trim());
+      } catch (e) {
+        console.error(e);
+        success = false;
+      }
+
+      lang.style = `${langStyle} background-color: ${success ? "#dcfce7" : "#fee2e2"} ;`;
+      setTimeout(() => {
+        lang.style = langStyle;
+      }, 800);
+    });
+  });
+</script>

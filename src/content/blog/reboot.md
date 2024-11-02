@@ -3,7 +3,7 @@ title: Reboot
 date: 2024-10-17
 ---
 
-I was at Stripe for four years. I loved my team, enjoyed the work, and had a close relationship with my manager. I quit at the end of August. I was burned out and struggling to sleep. Not because the job was too stressful, it felt more like I was fighting an invisible internal battle that demanded action. I was in dire need of a reboot.
+I was at Stripe for four years. I loved my team, enjoyed the work, and had a close relationship with my manager. I quit at the end of August. I was burned out and struggling to sleep ([full story](/website/blog/leaving_stripe)). Not because the job was too stressful, it felt more like I was fighting an invisible internal battle that demanded action. I was in dire need of a reboot. 
 
 I'm in the middle of a cataclysmic shift in my life. Technology and work have always provided a sense of stability; a sense of identity. My relationship with them is changing dramatically. I used to tell people "I'm a software engineer" with thinly veiled pride. I see things differently now. I've needed to start _really_ asking the question: what do I care about?
 

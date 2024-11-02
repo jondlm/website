@@ -15,7 +15,8 @@ const { Content } = await entry.render();
 ---
 
 <Layout small={true} title={entry.data.title}>
-  <article class="blog-post">
+  {/* see Layout.astro for styling of `md`*/}
+  <article class="md">
     <h1>{entry.data.title}</h1>
     <div class="text-gray-500 mt-0 text-sm">
       {entry.data.date.toISOString().slice(0, 10)}
@@ -23,25 +24,3 @@ const { Content } = await entry.render();
     <Content />
   </article>
 </Layout>
-
-<style is:global>
-  .blog-post h1 {
-    @apply text-4xl md:text-6xl;
-  }
-
-  .blog-post h2 {
-    @apply text-3xl md:text-5xl my-6;
-  }
-
-  .blog-post h3 {
-    @apply text-2xl md:text-4xl my-5;
-  }
-
-  .blog-post h4 {
-    @apply text-xl md:text-3xl my-4;
-  }
-
-  .blog-post p {
-    @apply my-4;
-  }
-</style>

@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const tilPosts = (await getCollection("til")).filter(
+  (entry) => entry.data.published,
+);
+
+tilPosts.sort((a, b) => {
+  // Descending
+  if (a.data.date > b.data.date) return -1;
+  if (a.data.date < b.data.date) return 1;
+  return 0;
+});
+---
+
+<Layout title="Today I learned (TIL)" small={true}>
+  <h1 class="text-4xl md:text-6xl mb-6">Today I learned...</h1>
+  <p class="mb-4">
+    I write these little snippets when I learn something I want to remember.
+    They might be unhelpfully terse for you. Personally I find the greatest
+    value in the writing of them. Perhaps they'll be helpful anyway. More likely
+    they will end up as anonymous input to some model where they'll slide down
+    the gullet of some gaping LLM maw. My knowledge will live on hidden deep in
+    the neural networks of our data garbage dumps. Yay AI!
+  </p>
+  <p class="mb-4">
+    "Jokes" aside, I use LLMs for learning technical things that can be clearly
+    validated. I will only include stuff here I personally wrote. If I use AI to
+    learn something I write down only information from my own memory. God help
+    us once the models are eating their own vomit.
+  </p>
+  <ul>
+    {
+      tilPosts.map((post) => (
+        <li>
+          {post.data.date.toISOString().slice(0, 10)}:
+          <a href={`/website/til/${post.slug}`}>{post.data.title}</a>{" "}
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
