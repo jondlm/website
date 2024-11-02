@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Website for Ranger: a tech company that builds software for humans."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/website/favicon.svg?v=2"><meta name="generator" content="Astro v4.16.3"><title>Tmux Control</title><link rel="stylesheet" href="/website/_astro/blog.-JKPVJtT.css"><script type="module" src="/website/_astro/hoisted.CfyTAeD1.js"></script></head> <body class="px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96 container mx-auto pb-2"> <div id="sentinal" class="h-6"></div> <div id="nav-stripe" class="print:hidden bg-slate-900 top-0 right-full left-0 w-full fixed opacity-0"></div> <nav id="navbar" class="print:hidden flex mb-8 px-2 pr-5 py-2 bg-slate-900 rounded-lg border border-slate-900"> <div class="flex-auto flex items-center"> <a href="/website"> <img src="/website/_astro/home_handwritten.DLN5N5L3_Z1ER9WK.svg" alt="home" loading="eager" width="65" height="25" decoding="async"> </a> </div> <div class="flex flex-auto items-center justify-end space-x-4"> <a class="text-slate-100" href="/website/values">values</a> <a class="text-slate-100" href="/website/blog">blog</a> <a class="text-slate-100" href="/website/til">TIL</a> <a class="text-slate-100" href="/website/resume">resume</a> </div> </nav>  <article class="md"> <h1 class="mb-2">TIL: Tmux Control</h1> <div class="flex items-baseline"> <div class="text-gray-500 mt-0 -mr-2 text-sm"> 2023-03-09 </div> <ul> <li class="text-gray-500 text-xs border border-gray-400 rounded-full px-1.5 mr-1 inline-block">tmux</li><li class="text-gray-500 text-xs border border-gray-400 rounded-full px-1.5 mr-1 inline-block">terminal</li> </ul> </div> <p>I never realized how powerful it could be to issue <code>tmux</code> commands directly. For example, I wrote this amazingly useful script called <code>lgo</code> that spins up a Golang playground. It automatically opens a new tmux window and sets up the watcher and neovim.</p>
+<p>I’d like to setup these scripts for other languages too when I need a quick sandbox to test out an idea or validate some possible garbage I got from chat GPT :)</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D">#!/usr/bin/env bash</span></span>
+<span class="line"><span style="color:#79B8FF">set</span><span style="color:#79B8FF"> -euo</span><span style="color:#9ECBFF"> pipefail</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">DIR</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">$HOME</span><span style="color:#9ECBFF">/learn/golang/</span><span style="color:#79B8FF">$1</span><span style="color:#9ECBFF">"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> "</span><span style="color:#E1E4E8">$DIR</span><span style="color:#9ECBFF">"</span></span>
+<span class="line"><span style="color:#E1E4E8">pushd </span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">$DIR</span><span style="color:#9ECBFF">"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">go</span><span style="color:#9ECBFF"> mod</span><span style="color:#9ECBFF"> init</span><span style="color:#9ECBFF"> "jdlm/learn/</span><span style="color:#79B8FF">$1</span><span style="color:#9ECBFF">"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">cat</span><span style="color:#F97583"> &#x3C;&#x3C;</span><span style="color:#9ECBFF"> EOF</span><span style="color:#F97583"> ></span><span style="color:#9ECBFF"> main.go</span></span>
+<span class="line"><span style="color:#9ECBFF">package main</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">import (</span></span>
+<span class="line"><span style="color:#9ECBFF">	"fmt"</span></span>
+<span class="line"><span style="color:#9ECBFF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">func main() {</span></span>
+<span class="line"><span style="color:#9ECBFF">	fmt.Println("Hello world.")</span></span>
+<span class="line"><span style="color:#9ECBFF">}</span></span>
+<span class="line"><span style="color:#9ECBFF">EOF</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">cat</span><span style="color:#F97583"> &#x3C;&#x3C;</span><span style="color:#9ECBFF"> EOF</span><span style="color:#F97583"> ></span><span style="color:#9ECBFF"> watch</span></span>
+<span class="line"><span style="color:#9ECBFF">#!/usr/bin/env bash</span></span>
+<span class="line"><span style="color:#9ECBFF">watchexec --clear --watch . --exts go -- go run .</span></span>
+<span class="line"><span style="color:#9ECBFF">EOF</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">chmod</span><span style="color:#9ECBFF"> +x</span><span style="color:#9ECBFF"> watch</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">tmux</span><span style="color:#9ECBFF"> new-window</span><span style="color:#79B8FF"> -n</span><span style="color:#9ECBFF"> "lgo-</span><span style="color:#79B8FF">$1</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> "</span><span style="color:#E1E4E8">$DIR</span><span style="color:#9ECBFF">"</span><span style="color:#9ECBFF"> "nvim main.go"</span></span>
+<span class="line"><span style="color:#B392F0">tmux</span><span style="color:#9ECBFF"> split-window</span><span style="color:#79B8FF"> -v</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> "</span><span style="color:#E1E4E8">$DIR</span><span style="color:#9ECBFF">"</span><span style="color:#9ECBFF"> "./watch"</span></span>
+<span class="line"><span style="color:#B392F0">tmux</span><span style="color:#9ECBFF"> select-pane</span><span style="color:#79B8FF"> -U</span></span>
+<span class="line"></span></code></pre> </article>   </body></html>

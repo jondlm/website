@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Website for Ranger: a tech company that builds software for humans."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/website/favicon.svg?v=2"><meta name="generator" content="Astro v4.16.3"><title>Datamash</title><link rel="stylesheet" href="/website/_astro/blog.-JKPVJtT.css"><script type="module" src="/website/_astro/hoisted.CfyTAeD1.js"></script></head> <body class="px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96 container mx-auto pb-2"> <div id="sentinal" class="h-6"></div> <div id="nav-stripe" class="print:hidden bg-slate-900 top-0 right-full left-0 w-full fixed opacity-0"></div> <nav id="navbar" class="print:hidden flex mb-8 px-2 pr-5 py-2 bg-slate-900 rounded-lg border border-slate-900"> <div class="flex-auto flex items-center"> <a href="/website"> <img src="/website/_astro/home_handwritten.DLN5N5L3_Z1ER9WK.svg" alt="home" loading="eager" width="65" height="25" decoding="async"> </a> </div> <div class="flex flex-auto items-center justify-end space-x-4"> <a class="text-slate-100" href="/website/values">values</a> <a class="text-slate-100" href="/website/blog">blog</a> <a class="text-slate-100" href="/website/til">TIL</a> <a class="text-slate-100" href="/website/resume">resume</a> </div> </nav>  <article class="md"> <h1 class="mb-2">TIL: Datamash</h1> <div class="flex items-baseline"> <div class="text-gray-500 mt-0 -mr-2 text-sm"> 2024-07-18 </div> <ul> <li class="text-gray-500 text-xs border border-gray-400 rounded-full px-1.5 mr-1 inline-block">shell</li><li class="text-gray-500 text-xs border border-gray-400 rounded-full px-1.5 mr-1 inline-block">stats</li> </ul> </div> <p>I often need to gather rudimentary statistics on a sampling of numbers. For
+example I recently was working on performance optimizations for a Rust swc
+plugin I was writing at Stripe. I had a file with numbers like this that
+represented the number of miliseconds it took to transform a single file:</p>
+<p>Given a file <code>stats.txt</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>40.478041</span></span>
+<span class="line"><span>40.72755</span></span>
+<span class="line"><span>40.788834</span></span>
+<span class="line"><span>40.847896</span></span>
+<span class="line"><span>40.90488</span></span>
+<span class="line"><span>41.224775</span></span>
+<span class="line"><span>41.336781</span></span>
+<span class="line"><span>41.581588</span></span>
+<span class="line"><span>41.73413</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Turns out there’s a GNU tool called <code>datamash</code> that you can install with <code>apt</code>
+or <code>brew</code>. You use it like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">datamash</span><span style="color:#79B8FF"> --header-out</span><span style="color:#9ECBFF"> count</span><span style="color:#79B8FF"> 1</span><span style="color:#9ECBFF"> min</span><span style="color:#79B8FF"> 1</span><span style="color:#9ECBFF"> max</span><span style="color:#79B8FF"> 1</span><span style="color:#9ECBFF"> mean</span><span style="color:#79B8FF"> 1</span><span style="color:#9ECBFF"> median</span><span style="color:#79B8FF"> 1</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF"> ~/stats</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> column</span><span style="color:#79B8FF"> -t</span></span>
+<span class="line"></span></code></pre>
+<p>The <code>column</code> part prints it nicely using the tab separators.</p>
+<p>The output looks like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>count(field-1)  min(field-1)  max(field-1)  mean(field-1)    median(field-1)</span></span>
+<span class="line"><span>120             38.635759     69.312647     49.238020183333  46.318816</span></span>
+<span class="line"><span></span></span></code></pre> </article>   </body></html>

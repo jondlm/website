@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Website for Ranger: a tech company that builds software for humans."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/website/favicon.svg?v=2"><meta name="generator" content="Astro v4.16.3"><title>Debugging Rust with LLDB</title><link rel="stylesheet" href="/website/_astro/blog.-JKPVJtT.css"><script type="module" src="/website/_astro/hoisted.CfyTAeD1.js"></script></head> <body class="px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96 container mx-auto pb-2"> <div id="sentinal" class="h-6"></div> <div id="nav-stripe" class="print:hidden bg-slate-900 top-0 right-full left-0 w-full fixed opacity-0"></div> <nav id="navbar" class="print:hidden flex mb-8 px-2 pr-5 py-2 bg-slate-900 rounded-lg border border-slate-900"> <div class="flex-auto flex items-center"> <a href="/website"> <img src="/website/_astro/home_handwritten.DLN5N5L3_Z1ER9WK.svg" alt="home" loading="eager" width="65" height="25" decoding="async"> </a> </div> <div class="flex flex-auto items-center justify-end space-x-4"> <a class="text-slate-100" href="/website/values">values</a> <a class="text-slate-100" href="/website/blog">blog</a> <a class="text-slate-100" href="/website/til">TIL</a> <a class="text-slate-100" href="/website/resume">resume</a> </div> </nav>  <article class="md"> <h1 class="mb-2">TIL: Debugging Rust with LLDB</h1> <div class="flex items-baseline"> <div class="text-gray-500 mt-0 -mr-2 text-sm"> 2023-08-28 </div> <ul> <li class="text-gray-500 text-xs border border-gray-400 rounded-full px-1.5 mr-1 inline-block">rust</li><li class="text-gray-500 text-xs border border-gray-400 rounded-full px-1.5 mr-1 inline-block">lldb</li><li class="text-gray-500 text-xs border border-gray-400 rounded-full px-1.5 mr-1 inline-block">debug</li> </ul> </div> <p>Context: while looking into a <a href="https://github.com/parcel-bundler/parcel/issues/9140">Parcel bug</a> I found myself needing to debug some of the Rust code that uses swc.</p>
+<p>Turns out we can use common tools that C/C++ developers use as long as the Rust code was compiled with debug symbols. By default cargo, and napi, do this so it’s actually quite easy to do.</p>
+<p>The first trick is to put the following into the Rust code so you can have some time to attach the debugger:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="rust"><code><span class="line"><span style="color:#B392F0">println!</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#9ECBFF">  "Sleeping for 60s. Run the following to attach a debugger:</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">rust-lldb --attach-pid {}"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">  std</span><span style="color:#F97583">::</span><span style="color:#B392F0">process</span><span style="color:#F97583">::</span><span style="color:#B392F0">id</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">std</span><span style="color:#F97583">::</span><span style="color:#B392F0">thread</span><span style="color:#F97583">::</span><span style="color:#B392F0">sleep</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">std</span><span style="color:#F97583">::</span><span style="color:#B392F0">time</span><span style="color:#F97583">::</span><span style="color:#B392F0">Duration</span><span style="color:#F97583">::</span><span style="color:#B392F0">from_secs</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">60</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"></span></code></pre>
+<p>Then run <code>rust-lldb --attach-pid &#x3C;pid></code> which should drop you into the repl debugger.</p>
+<p>You should see something like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Process 76274 stopped</span></span>
+<span class="line"><span>* thread #1, queue = 'com.apple.main-thread', stop reason = signal SIGSTOP</span></span>
+<span class="line"><span>    frame #0: 0x000000018157f50c libsystem_kernel.dylib`__semwait_signal + 8</span></span>
+<span class="line"><span>libsystem_kernel.dylib`:</span></span>
+<span class="line"><span>->  0x18157f50c &#x3C;+8>:  b.lo   0x18157f52c               ; &#x3C;+40></span></span>
+<span class="line"><span>    0x18157f510 &#x3C;+12>: pacibsp</span></span>
+<span class="line"><span>    0x18157f514 &#x3C;+16>: stp    x29, x30, [sp, #-0x10]!</span></span>
+<span class="line"><span>    0x18157f518 &#x3C;+20>: mov    x29, sp</span></span>
+<span class="line"><span>Target 0: (node) stopped.</span></span>
+<span class="line"><span>Executable module set to "/Users/jdlm/.nodenv/versions/18.14.0/bin/node".</span></span>
+<span class="line"><span>Architecture set to: arm64e-apple-macosx-.</span></span>
+<span class="line"><span>(lldb)</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>In this case I’m debugging a Rust program that’s fed to node.js via napi. The JS has a <code>require('./some-binary-file.node')</code> that contains the compiled Rust code.</p>
+<p>Here are some operations I have found useful so far once I’m in the attached <code>(lldb)</code> repl:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>cmd</th><th>desc</th></tr></thead><tbody><tr><td><code>bt</code></td><td><strong>Start here</strong>: show backtrace. Useful to find the source file names for setting breakpoints.</td></tr><tr><td><code>b file.rs:123</code></td><td>Set breakpoint in <code>file.rs</code> at line <code>123</code></td></tr><tr><td><code>b</code></td><td>List all breakpoints</td></tr><tr><td><code>c</code></td><td>Continue exectuion</td></tr><tr><td><code>v</code></td><td>List variables</td></tr><tr><td><code>f</code></td><td>Show current position (frame)</td></tr><tr><td><code>p some_var</code></td><td>Print a variable. Might need <code>*some_var</code> to deference pointers</td></tr><tr><td><code>p *node->span</code></td><td>Print a specific field on a variable</td></tr><tr><td><code>n</code></td><td>Step over</td></tr><tr><td><code>s</code></td><td>Step into</td></tr><tr><td><code>finish</code></td><td>Step out. Can also provide a number of frames to step out of.</td></tr><tr><td><code>frame select N</code></td><td>Lets you move up and down the stack by selecting frame number <code>N</code></td></tr><tr><td><code>kill</code></td><td>Kills the attached process</td></tr><tr><td><code>help</code></td><td>🙏</td></tr></tbody></table>
+<p>Once you have a breakpoint set, use <code>c</code> to continue execution to that point.</p> </article>   </body></html>

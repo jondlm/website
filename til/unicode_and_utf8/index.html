@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Website for Ranger: a tech company that builds software for humans."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/website/favicon.svg?v=2"><meta name="generator" content="Astro v4.16.3"><title>Unicode and UTF8</title><link rel="stylesheet" href="/website/_astro/blog.-JKPVJtT.css"><script type="module" src="/website/_astro/hoisted.CfyTAeD1.js"></script></head> <body class="px-4 md:px-16 lg:px-32 xl:px-64 2xl:px-96 container mx-auto pb-2"> <div id="sentinal" class="h-6"></div> <div id="nav-stripe" class="print:hidden bg-slate-900 top-0 right-full left-0 w-full fixed opacity-0"></div> <nav id="navbar" class="print:hidden flex mb-8 px-2 pr-5 py-2 bg-slate-900 rounded-lg border border-slate-900"> <div class="flex-auto flex items-center"> <a href="/website"> <img src="/website/_astro/home_handwritten.DLN5N5L3_Z1ER9WK.svg" alt="home" loading="eager" width="65" height="25" decoding="async"> </a> </div> <div class="flex flex-auto items-center justify-end space-x-4"> <a class="text-slate-100" href="/website/values">values</a> <a class="text-slate-100" href="/website/blog">blog</a> <a class="text-slate-100" href="/website/til">TIL</a> <a class="text-slate-100" href="/website/resume">resume</a> </div> </nav>  <article class="md"> <h1 class="mb-2">TIL: Unicode and UTF8</h1> <div class="flex items-baseline"> <div class="text-gray-500 mt-0 -mr-2 text-sm"> 2023-10-06 </div> <ul> <li class="text-gray-500 text-xs border border-gray-400 rounded-full px-1.5 mr-1 inline-block">encoding</li> </ul> </div> <p>I was curious today about how utf8 encoding actually works. It’s really interesting actually and not terrible complicated if you break it down. utf8 is backward compatible with the ASCII encoding. utf8 uses a variable number of bytes to represent different characters. I’ll keep this brief and give a few examples:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Dec      Hex    Chr</span></span>
+<span class="line"><span>63       3F     ?   &#x3C;- ASCII goes from 0 to 127 (dec)</span></span>
+<span class="line"><span>128161   1F4A1  💡  &#x3C;- Unicode extends beyond 127, also expressed as a "codepoint": `U+1F4A1` which is just hex</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Some symbols require <em>two</em> characters using something called “variation sequences”: <a href="http://unicode.org/faq/vs.html">http://unicode.org/faq/vs.html</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Decimal: 9724   65039</span></span>
+<span class="line"><span>Hex:     25FC   FE0F</span></span>
+<span class="line"><span>Chr:     ◼️            &#x3C;- black medium square</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>You can know how many bytes are used in a character by looking at the binary. Let’s take 💡 as an example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Decimal: 128161</span></span>
+<span class="line"><span>Hex:     1F4A1</span></span>
+<span class="line"><span>Bytes:   F0          9F         92         A1</span></span>
+<span class="line"><span>Binary:  11110000    10011111   10010010   10100001</span></span>
+<span class="line"><span>         |           |</span></span>
+<span class="line"><span>         |           |> leading 10 is used for the children bytes in a sequence</span></span>
+<span class="line"><span>         |</span></span>
+<span class="line"><span>         |> the leading 11110 marks it as a 4 byte sequence</span></span>
+<span class="line"><span></span></span></code></pre> </article>   </body></html>

@@ -1,0 +1,7 @@
+const i=document.querySelectorAll("[data-language]"),a=`
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500" width="16" height="15" style="display:inline-block;vertical-align:bottom">
+    <rect width="266" height="318" x="117" y="91" stroke="#000" stroke-width="40" fill="none" rx="40"/>
+    <rect width="132" height="76.56" x="184" y="53" stroke="#fff" stroke-width="40" rx="21"/>
+    <rect width="100" height="58" x="200" y="62" stroke="#000" stroke-width="32" fill="#fff" rx="21"/>
+    <path stroke="#000" stroke-linecap="round" stroke-width="40" d="M176 183h151m-153 74h151m-151 74h151"/>
+</svg>`,s="border: 1px solid #aab0b7; border-bottom: none; transition: all 0.4s;";async function l(e){const n="text/plain",t=new Blob([e],{type:n}),r=[new ClipboardItem({[n]:t})];await navigator.clipboard.write(r)}Array.from(i).forEach(e=>{if(!(e instanceof HTMLElement))return;const n=document.createElement("div"),t=document.createElement("button");t.innerHTML=`${e.dataset.language} ${a}`,t.classList.add("p-0.5","px-1","rounded-t"),t.setAttribute("style",s),n.classList.add("text-xs","-mt-4"),n.setAttribute("style","display: flex; justify-content: flex-end;"),n.appendChild(t),e.parentElement!=null&&e.parentElement.insertBefore(n,e),t.addEventListener("click",async()=>{let r=!0;try{await l((e.textContent??"").trim())}catch(o){console.error(o),r=!1}t.setAttribute("style",`${s} background-color: ${r?"#dcfce7":"#fee2e2"} ;`),setTimeout(()=>{t.setAttribute("style",s)},800)})});
