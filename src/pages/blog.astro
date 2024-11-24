@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 
 const blogPosts = await getCollection("blog");
+blogPosts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
 ---
 
 <Layout title="Blog" small={true}>
