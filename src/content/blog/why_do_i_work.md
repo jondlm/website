@@ -3,6 +3,8 @@ title: Why do I work?
 date: 2026-08-21
 ---
 
+*This was written with old fashioned human intelligence. No AI was harmed in the making of this blog post either for writing or editing.*
+
 At first glance the title of this post may seem odd, obvious, or maybe just pointless. Regardless, it's an important question to me. And it's been harder to detangle than I expected. The journey of answering that single question has been both a profound source of personal insight and a wellspring of ostensible nightmares. I've been wrestling with it for years. Let's take a journey  through my mind and see if we can have some fun together along the way.
 
 I first encountered computers as a workaround for parental rules against video games. My parents wouldn't let me buy an N64, so I was left with what I perceived as second best: a desktop PC. As long as whatever I did with the computer had some vague connection to education I could get away with it. I spent much of my childhood on computers. There was something consistently alluring about them. The idea that words could be written (in a mystical language called C) that created entire worlds within a screen was endlessly fascinating and perplexing to me. The game Myst stands out as a poignant example and metaphor from that era.
