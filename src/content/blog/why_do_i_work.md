@@ -3,13 +3,15 @@ title: Why do I work?
 date: 2026-08-21
 ---
 
+*Alternate title: Life after Stripe. This is part 2 of [Leaving Stripe](/website/blog/leaving_stripe).*
+
 *This was written with old fashioned human intelligence. No AI was harmed in the making of this blog post either for writing or editing.*
 
 At first glance the title of this post may seem odd, obvious, or maybe just pointless. Regardless, it's an important question to me. And it's been harder to detangle than I expected. The journey of answering that single question has been both a profound source of personal insight and a wellspring of ostensible nightmares. I've been wrestling with it for years. Let's take a journey  through my mind and see if we can have some fun together along the way.
 
 I first encountered computers as a workaround for parental rules against video games. My parents wouldn't let me buy an N64, so I was left with what I perceived as second best: a desktop PC. As long as whatever I did with the computer had some vague connection to education I could get away with it. I spent much of my childhood on computers. There was something consistently alluring about them. The idea that words could be written (in a mystical language called C) that created entire worlds within a screen was endlessly fascinating and perplexing to me. The game Myst stands out as a poignant example and metaphor from that era.
 
-When the time came to go to college, I chose computer science. I struggled through the requisite math classes and finally got to write some honest-to-god Java. I sucked at it. I vividly recall sweating through my shirt as I frantically scribbled down half-baked programs on my final exam with a pencil on paper as the test timer expired. I thought, "if this is anything like what programming is like, I want nothing to do it. I'm a people person. I'm not cut out for this cubicle crap." I dropped out of CS after completing the first year and considered moving away and studying art.
+When the time came to go to college, I chose computer science. I struggled through the requisite math classes and finally got to write some honest-to-god Java. I sucked at it. I vividly recall sweating through my shirt as I frantically scribbled down half-baked programs on my final exam with a pencil on paper as the test timer expired. I thought, "if this is anything like what programming is like, I want nothing to do with it. I'm a people person. I'm not cut out for this cubicle crap." I dropped out of CS after completing the first year and considered moving away and studying art.
 
 Practicality got hold of me and I decided to follow in my dad's footsteps[^1] and pursue a degree in business. I settled for _some_ geekiness and got my degree in information systems where there were no hand-written coding tests. I triple checked that before signing on to the program.
 
@@ -45,7 +47,7 @@ As you may have guessed, it didn't last long. I had a short and intense burst of
 
 At that point I'd given up on finding my "dream job." I'd spent hours scouring job posting boards and I was growing tired of all the "AI will change the world and you can too!" bullshit that seemed to fill every crack of the job market. I was coming to see that a dream job didn't actually exist. Everything was shit in its own unique way. But Thatch reached deep into my psyche and tickled that "meaning" part of my brain. They presented me with a mission that felt meaningful. They seemed like genuinely caring people trying to make a dent in the awfulness that is the American healthcare system.
 
-Personally, I'd experienced the shittiness of being tied to a single healthcare provider that was dictated by my employer. The idea that I could receive a stipend from my employer to purchase my own insurance, and use the left funds to make health related purchases, was extremely enticing. 
+Personally, I'd experienced the shittiness of being tied to a single healthcare provider that was dictated by my employer. The idea that I could receive a stipend from my employer to purchase my own insurance, and use the left over funds to make health related purchases, was extremely enticing. 
 
 And so I found myself once again hopping on the mission train. I was going to fix healthcare and save the world. I'd have to learn Ruby to do it, but sacrifices must be made.
 
@@ -59,7 +61,7 @@ The next time we feel a sense of dread, let's remember to take a deep breath. It
 
 [^1]: My dad was a serial entrepreneur of modest success. His most successful company was importing and exporting canned tuna. Let's just say I ate a ton a' tuna.
 
-[^2]: I wrote about leg of my journey that [over here](https://jondlm.github.io/website/blog/leaving_stripe/).
+[^2]: I wrote about that leg of my journey that [over here](/website/blog/leaving_stripe).
 
 [^3]: I like to imagine Piglet from *Winny the Pooh* meditating while Eeyore stands in the background watching a butterfly land on his nose with a depressed sigh.
 
